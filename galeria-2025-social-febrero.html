@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Leathermen Club of Spain">
+    <title>Social de Febrero 2025 - LMCS</title>
+    <meta name="description" content="Galería de fotos del Social de Febrero 2025 del Leathermen Club of Spain.">
+    <link rel="icon" type="image/png" href="images/iconLMCS.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img loading="lazy" src="images/logoLMCS_black.png" alt="Leathermen Club of Spain Logo">
+                <span>LEATHERMEN CLUB OF SPAIN</span>
+            </div>
+            <nav>
+                <button class="nav-toggle" aria-label="Abrir/cerrar menú" aria-expanded="false" aria-controls="main-menu" type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="main-menu" class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="galeria.html" class="active">Galería</a></li>
+                    <li><a href="hazte-socio.html">Hazte Socio</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="carousel-main">
+        <div class="carousel-container">
+            
+            <!-- Header del evento -->
+            <div class="carousel-header">
+                <a href="galeria-2025.html" class="btn-back-carousel">
+                    <i class="fas fa-arrow-left"></i> Volver a 2025
+                </a>
+                <div class="event-title">
+                    <h1>Social</h1>
+                    <h2>Febrero 2025</h2>
+                    <p class="event-date-header"><i class="fas fa-calendar"></i> Febrero 2025</p>
+                    <p class="event-credit">
+                        <a href="https://www.instagram.com/reichelspunto/" target="_blank" rel="noopener" class="instagram-credit" aria-label="Instagram de Reichel Spunto" title="Ver Instagram de Reichel Spunto">
+                            <i class="fab fa-instagram"></i> Reichel Spunto
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- SWIPER CAROUSEL -->
+            <div class="swiper eventSwiper">
+                <div class="swiper-wrapper">
+                    
+                    <!-- Foto 1 -->
+                    <div class="swiper-slide">
+                        <img src="images/galeria/2025/SOCIAL FEBRERO/social_febrero1.JPG" alt="Social Febrero - Foto 1" loading="lazy">
+                    </div>
+
+                    <!-- Foto 2 -->
+                    <div class="swiper-slide">
+                        <img src="images/galeria/2025/SOCIAL FEBRERO/social_febrero2.JPG" alt="Social Febrero - Foto 2" loading="lazy">
+                    </div>
+
+                    <!-- Foto 3 -->
+                    <div class="swiper-slide">
+                        <img src="images/galeria/2025/SOCIAL FEBRERO/social_febrero3.JPG" alt="Social Febrero - Foto 3" loading="lazy">
+                    </div>
+
+                    <!-- Foto 4 -->
+                    <div class="swiper-slide">
+                        <img src="images/galeria/2025/SOCIAL FEBRERO/social_febrero4.JPG" alt="Social Febrero - Foto 4" loading="lazy">
+                    </div>
+
+                    <!-- Foto 5 -->
+                    <div class="swiper-slide">
+                        <img src="images/galeria/2025/SOCIAL FEBRERO/social_febrero5.JPG" alt="Social Febrero - Foto 5" loading="lazy">
+                    </div>
+
+                    <!-- Foto 6 -->
+                    <div class="swiper-slide">
+                        <img src="images/galeria/2025/SOCIAL FEBRERO/social_febrero6.JPG" alt="Social Febrero - Foto 6" loading="lazy">
+                    </div>
+
+                    <!-- Foto 7 -->
+                    <div class="swiper-slide">
+                        <img src="images/galeria/2025/SOCIAL FEBRERO/social_febrero7.JPG" alt="Social Febrero - Foto 7" loading="lazy">
+                    </div>
+
+                    <!-- Foto 8 -->
+                    <div class="swiper-slide">
+                        <img src="images/galeria/2025/SOCIAL FEBRERO/social_febrero8.JPG" alt="Social Febrero - Foto 8" loading="lazy">
+                    </div>
+
+                    <!-- Foto 9 -->
+                    <div class="swiper-slide">
+                        <img src="images/galeria/2025/SOCIAL FEBRERO/social_febrero9.JPG" alt="Social Febrero - Foto 9" loading="lazy">
+                    </div>
+
+                    <!-- Foto 10 -->
+                    <div class="swiper-slide">
+                        <img src="images/galeria/2025/SOCIAL FEBRERO/social_febrero10.JPG" alt="Social Febrero - Foto 10" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Flechas de navegación -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <!-- Barra de progreso y controles -->
+            <div class="carousel-controls">
+                
+                <!-- Barra de progreso -->
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+
+                <!-- Contador y botones -->
+                <div class="controls-bottom">
+                    <div class="photo-counter">
+                        <span class="counter-text">Foto</span>
+                        <span class="counter-current" id="currentSlide">1</span>
+                        <span class="counter-divider">de</span>
+                        <span class="counter-total" id="totalSlides">10</span>
+                        <span class="counter-percentage">(<span id="percentage">10</span>%)</span>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button id="downloadBtn" class="btn-action" title="Descargar foto actual">
+                            <i class="fas fa-download"></i> Descargar
+                        </button>
+                        <button id="fullscreenBtn" class="btn-action" title="Ver en pantalla completa">
+                            <i class="fas fa-expand"></i> Pantalla completa
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="mailto:leathermenclubspain@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.instagram.com/leathermen_club_of_spain_lmcs" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/leathermenclubofspain/" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://wa.me/34636688063" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="copyright-line">
+            <p>&copy; 2025 Leathermen Club of Spain. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Menú móvil (hamburguesa) -->
+    <script>
+        (function () {
+            const btn = document.querySelector('.nav-toggle');
+            const menu = document.querySelector('nav ul.nav-menu');
+            if (!btn || !menu) return;
+
+            btn.addEventListener('click', () => {
+                const isOpen = menu.classList.toggle('open');
+                btn.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            menu.querySelectorAll('a').forEach((a) => {
+                a.addEventListener('click', () => {
+                    menu.classList.remove('open');
+                    btn.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) {
+                    menu.classList.remove('open');
+                    btn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        })();
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Script del Carousel -->
+    <script src="carousel.js"></script>
+</body>
+</html>

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Leathermen Club of Spain">
+    <title>Eventos 2026 - Leathermen Club of Spain</title>
+    <meta name="description" content="Eventos del Leathermen Club of Spain 2026. Descubre nuestras próximas actividades y encuentros.">
+    <meta name="keywords" content="Leathermen, Club, España, Eventos, Actividades, Encuentros, LMCS, 2026">
+    <link rel="icon" type="image/png" href="images/iconLMCS.png">
+    <meta property="og:title" content="Eventos 2026 - Leathermen Club of Spain">
+    <meta property="og:description" content="Eventos del Leathermen Club of Spain 2026.">
+    <meta property="og:image" content="https://XXXX/images/og-image.png">
+    <meta property="og:url" content="https://XXXX/eventos.html">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#2C4A7C">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img loading="lazy" src="images/logoLMCS_black.png" alt="Leathermen Club of Spain Logo">
+                <span>LEATHERMEN CLUB OF SPAIN</span>
+            </div>
+            <nav>
+                <button class="nav-toggle" aria-label="Abrir/cerrar menú" aria-expanded="false" aria-controls="main-menu" type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="main-menu" class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="eventos.html" class="active">Eventos</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="hazte-socio.html">Hazte Socio</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <div class="eventos-page">
+            <h1>Eventos 2026</h1>
+            <p class="eventos-intro">Descubre todos nuestros eventos y actividades del año</p>
+
+            <!-- Leyenda -->
+            <div class="timeline-legend">
+                <div class="legend-item">
+                    <div class="legend-dot past"></div>
+                    <span>Pasado</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot next"></div>
+                    <span>Próximo</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot future"></div>
+                    <span>Futuro</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot special"></div>
+                    <span>Especial</span>
+                </div>
+            </div>
+
+            <!-- TIMELINE HORIZONTAL (scroll + flechas) -->
+            <div class="timeline-scroll" aria-label="Línea de tiempo de eventos">
+                <button class="timeline-arrow left" type="button" aria-label="Ver eventos anteriores">
+                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                </button>
+
+                <div class="timeline-horizontal" id="timelineScroll">
+                    <div class="timeline-wrapper" id="timeline">
+                        <!-- Los eventos se generan con JS -->
+                    </div>
+                </div>
+
+                <button class="timeline-arrow right" type="button" aria-label="Ver eventos siguientes">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- EVENTOS ESPECIALES -->
+            <section class="eventos-section">
+                <h2 class="eventos-section-title">
+                    <i class="fas fa-star"></i>
+                    Eventos Especiales
+                </h2>
+                <div class="eventos-grid" id="eventosEspeciales">
+                    <!-- Se generan con JS -->
+                </div>
+            </section>
+
+            <!-- EVENTOS REGULARES -->
+            <section class="eventos-section">
+                <h2 class="eventos-section-title regular">
+                    <i class="fas fa-calendar-alt"></i>
+                    Madrid Leather Social
+                </h2>
+                <div class="eventos-grid" id="eventosRegulares">
+                    <!-- Se generan con JS -->
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="mailto:leathermenclubspain@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.instagram.com/leathermen_club_of_spain_lmcs" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/leathermenclubofspain/" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://wa.me/34636688063" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="copyright-line">
+            <p>&copy; 2025 Leathermen Club of Spain. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ========================================
+        // DATOS DE EVENTOS 2026
+        // ========================================
+        const eventos = [
+            {
+                id: 'roscon',
+                fecha: '2026-01-06',
+                fechaTexto: '6 Ene',
+                titulo: 'Roscón de Reyes',
+                descripcion: 'Comenzamos el año compartiendo el tradicional Roscón de Reyes con toda la comunidad.',
+                ubicacion: 'Fundación 26 de Diciembre',
+                direccion: 'Calle Fray Ceferino González, 4, Madrid',
+                logo: 'images/26d.png',
+                horario: '18:00',
+                especial: false
+            },
+            {
+                id: 'mls-febrero',
+                fecha: '2026-02-07',
+                fechaTexto: '7 Feb',
+                titulo: 'Madrid Leather Social',
+                descripcion: 'Encuentro mensual de la comunidad leather en Madrid.',
+                ubicacion: 'Ingrato Madrid',
+                direccion: 'Calle de Muñoz Torrero, 5',
+                logo: 'images/ingrato.png',
+                horario: '18:00',
+                especial: false
+            },
+            {
+                id: 'mls-marzo',
+                fecha: '2026-03-07',
+                fechaTexto: '7 Mar',
+                titulo: 'Madrid Leather Social - 2nd Hand Market',
+                descripcion: 'Social mensual con mercadillo de segunda mano de prendas leather y accesorios.',
+                ubicacion: 'Inklub',
+                direccion: 'Calle Marqués de Leganés, 12, Madrid',
+                logo: 'images/inklub.png',
+                horario: '18:00',
+                especial: false
+            },
+            {
+                id: 'iberian-meetup',
+                fecha: '2026-03-20',
+                fechaFin: '2026-03-22',
+                fechaTexto: '20-22 Mar',
+                titulo: 'Iberian Leather Meet-up',
+                descripcion: 'Encuentro ibérico de la comunidad leather. Un fin de semana de hermandad entre clubes de España y Portugal.',
+                ubicacion: 'Varios lugares',
+                direccion: 'Badajoz',
+                logo: 'images/logoLMCS_black.png',
+                horario: 'Viernes a Domingo',
+                especial: true
+            },
+            {
+                id: 'bluf-abril',
+                fecha: '2026-04-04',
+                fechaTexto: '4 Abr',
+                titulo: 'Madrid Leather Social - BLUF Social',
+                descripcion: 'Evento conjunto con BLUF Madrid. Leather y uniform unidos.',
+                ubicacion: 'Inklub',
+                direccion: 'Calle Marqués de Leganés, 12, Madrid',
+                logo: 'images/inklub.png',
+                horario: '18:00',
+                especial: false
+            },
+            {
+                id: 'aniversario',
+                fecha: '2026-05-01',
+                fechaFin: '2026-05-03',
+                fechaTexto: '1-3 May',
+                titulo: '7º Aniversario LMCS',
+                descripcion: 'Celebramos siete años de comunidad, amistad y leather. Un fin de semana especial con múltiples actividades y fiestas.',
+                ubicacion: 'Varios lugares',
+                direccion: 'Madrid',
+                logo: 'images/logoLMCS_black.png',
+                horario: 'Viernes a Domingo',
+                especial: true
+            },
+            {
+                id: 'mls-junio',
+                fecha: '2026-06-06',
+                fechaTexto: '6 Jun',
+                titulo: 'Madrid Leather Social',
+                descripcion: 'Encuentro mensual preparándonos para el verano.',
+                ubicacion: 'Inklub',
+                direccion: 'Calle Marqués de Leganés, 12, Madrid',
+                logo: 'images/inklub.png',
+                horario: '18:00',
+                especial: false
+            },
+            {
+                id: 'pride',
+                fecha: '2026-07-03',
+                fechaFin: '2026-07-05',
+                fechaTexto: '3-5 Jul',
+                titulo: 'Madrid Pride',
+                descripcion: 'Participación del club en las fiestas del Orgullo de Madrid. Carroza, fiestas y mucha visibilidad leather.',
+                ubicacion: 'Varios lugares',
+                direccion: 'Madrid',
+                logo: 'images/logoLMCS_black.png',
+                horario: 'Viernes a Domingo',
+                especial: true
+            },
+            {
+                id: 'mls-septiembre',
+                fecha: '2026-09-05',
+                fechaTexto: '5 Sep',
+                titulo: 'Madrid Leather Social',
+                descripcion: 'Reencuentro con la comunidad tras el verano.',
+                ubicacion: 'Inklub',
+                direccion: 'Calle Marqués de Leganés, 12, Madrid',
+                logo: 'images/inklub.png',
+                horario: '18:00',
+                especial: false
+            },
+            {
+                id: 'mls-octubre',
+                fecha: '2026-10-03',
+                fechaTexto: '3 Oct',
+                titulo: 'Madrid Leather Social',
+                descripcion: 'El otoño trae el mejor ambiente para el cuero.',
+                ubicacion: 'Inklub',
+                direccion: 'Calle Marqués de Leganés, 12, Madrid',
+                logo: 'images/inklub.png',
+                horario: '18:00',
+                especial: false
+            },
+            {
+                id: 'mlw',
+                fecha: '2026-10-30',
+                fechaFin: '2026-11-01',
+                fechaTexto: '30 Oct - 1 Nov',
+                titulo: 'Madrid Leather Weekend - Mr. Leather Spain 2027',
+                descripcion: 'El evento más importante del año. Tres días de celebración leather con la elección de Mr. Leather Spain 2027.',
+                ubicacion: 'Varios lugares',
+                direccion: 'Madrid',
+                logo: 'images/logoLMCS_black.png',
+                horario: 'Viernes a Domingo',
+                especial: true
+            },
+            {
+                id: 'bluf-noviembre',
+                fecha: '2026-11-07',
+                fechaTexto: '7 Nov',
+                titulo: 'Madrid Leather Social - BLUF Social',
+                descripcion: 'Cerramos el año de sociales con BLUF Madrid.',
+                ubicacion: 'Inklub',
+                direccion: 'Calle Marqués de Leganés, 12, Madrid',
+                logo: 'images/inklub.png',
+                horario: '18:00',
+                especial: false
+            }
+        ];
+
+        // ========================================
+        // FUNCIONES
+        // ========================================
+        const hoy = new Date();
+        hoy.setHours(0, 0, 0, 0);
+
+        function getEstado(evento) {
+            const fecha = new Date(evento.fecha);
+            const fechaFin = evento.fechaFin ? new Date(evento.fechaFin) : fecha;
+            if (fechaFin < hoy) return 'past';
+            return 'future';
+        }
+
+        function encontrarProximo() {
+            for (let i = 0; i < eventos.length; i++) {
+                if (getEstado(eventos[i]) === 'future') {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        function generarTimeline() {
+            const timeline = document.getElementById('timeline');
+            const proximoIndex = encontrarProximo();
+            
+            let html = '';
+            eventos.forEach((evento, index) => {
+                const estado = getEstado(evento);
+                let clases = ['timeline-item', estado];
+                
+                if (index === proximoIndex) clases.push('next');
+                if (evento.especial) clases.push('special');
+                
+                let nombreCorto = evento.titulo.split(' - ')[0];
+                if (nombreCorto.length > 15) {
+                    nombreCorto = nombreCorto.substring(0, 14) + '...';
+                }
+                
+                html += `
+                    <div class="${clases.join(' ')}" onclick="scrollToEvento('${evento.id}')">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">${evento.fechaTexto}</div>
+                            <div class="timeline-name">${nombreCorto}</div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            timeline.innerHTML = html;
+        }
+
+        function generarTarjetaEvento(evento, index, proximoIndex) {
+            const estado = getEstado(evento);
+            let clases = ['evento-card', estado];
+            
+            if (index === proximoIndex) clases.push('next');
+            if (evento.especial) clases.push('special');
+            
+            let statusText = '';
+            let statusClass = '';
+            if (estado === 'past') {
+                statusText = '<i class="fas fa-check"></i> Finalizado';
+                statusClass = 'pasado';
+            } else if (index === proximoIndex) {
+                statusText = '<i class="fas fa-bolt"></i> Próximo';
+                statusClass = 'proximo';
+            } else {
+                statusText = '<i class="fas fa-calendar"></i> Próximamente';
+                statusClass = 'futuro';
+            }
+            
+            return `
+                <div class="${clases.join(' ')}" id="${evento.id}">
+                    <div class="evento-card-header">
+                        <div class="fecha">
+                            <i class="fas fa-calendar-alt"></i>
+                            ${evento.fechaTexto} 2026
+                        </div>
+                        ${evento.especial ? '<div class="special-badge"><i class="fas fa-star"></i> Especial</div>' : ''}
+                        <h3>${evento.titulo}</h3>
+                    </div>
+                    <div class="evento-card-body">
+                        <p class="evento-description">${evento.descripcion}</p>
+                        <div class="evento-info-grid">
+                            <div class="evento-ubicacion">
+                                <img loading="lazy" src="${evento.logo}" alt="${evento.ubicacion}" class="ubicacion-logo" onerror="this.src='images/logoLMCS_black.png'">
+                                <div class="ubicacion-info">
+                                    <div class="ubicacion-nombre">${evento.ubicacion}</div>
+                                    <div class="ubicacion-direccion">${evento.direccion}</div>
+                                </div>
+                            </div>
+                            <div class="evento-horario">
+                                <i class="fas fa-clock"></i>
+                                <span class="horario-text">${evento.horario}</span>
+                            </div>
+                        </div>
+                        <div class="evento-status ${statusClass}">
+                            ${statusText}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function generarEventos() {
+            const especialesContainer = document.getElementById('eventosEspeciales');
+            const regularesContainer = document.getElementById('eventosRegulares');
+            const proximoIndex = encontrarProximo();
+            
+            let especialesHtml = '';
+            let regularesHtml = '';
+            
+            eventos.forEach((evento, index) => {
+                const tarjeta = generarTarjetaEvento(evento, index, proximoIndex);
+                if (evento.especial) {
+                    especialesHtml += tarjeta;
+                } else {
+                    regularesHtml += tarjeta;
+                }
+            });
+            
+            especialesContainer.innerHTML = especialesHtml;
+            regularesContainer.innerHTML = regularesHtml;
+        }
+
+        function scrollToEvento(id) {
+            const elemento = document.getElementById(id);
+            if (elemento) {
+                elemento.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        // ========================================
+        // INICIALIZACIÓN
+        // ========================================
+        document.addEventListener('DOMContentLoaded', function() {
+            generarTimeline();
+            generarEventos();
+
+            // Flechas para mover el timeline horizontal
+            const scroller = document.getElementById('timelineScroll');
+            const prevBtn = document.querySelector('.timeline-arrow.left');
+            const nextBtn = document.querySelector('.timeline-arrow.right');
+
+            function scrollTimeline(direction) {
+                if (!scroller) return;
+                const amount = Math.round(scroller.clientWidth * 0.85);
+                scroller.scrollBy({ left: direction * amount, behavior: 'smooth' });
+            }
+
+            if (prevBtn) prevBtn.addEventListener('click', () => scrollTimeline(-1));
+            if (nextBtn) nextBtn.addEventListener('click', () => scrollTimeline(1));
+        });
+
+        // ========================================
+        // MENÚ HAMBURGUESA
+        // ========================================
+        (function () {
+            const btn = document.querySelector('.nav-toggle');
+            const menu = document.querySelector('nav ul.nav-menu');
+            if (!btn || !menu) return;
+
+            btn.addEventListener('click', () => {
+                const isOpen = menu.classList.toggle('open');
+                btn.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            menu.querySelectorAll('a').forEach((a) => {
+                a.addEventListener('click', () => {
+                    menu.classList.remove('open');
+                    btn.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) {
+                    menu.classList.remove('open');
+                    btn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        })();
+    </script>
+
+    <script>
+        /* =========================
+           MÓVIL: Header/Footer inteligentes por scroll
+           - Header aparece al subir un poco
+           - Footer aparece al bajar un poco
+           ========================= */
+        (function () {
+            const header = document.querySelector('header');
+            const footer = document.querySelector('footer');
+            const main = document.querySelector('main');
+            if (!header || !footer) return;
+
+            const mq = window.matchMedia('(max-width: 768px)');
+
+            // Sensibilidad “nivel dios” (ajustable)
+            const HEADER_HIDE_PX = 90;      // cuánto tienes que bajar para esconder header
+            const HEADER_SHOW_PX = 55;      // cuánto tienes que subir para mostrar header
+            const FOOTER_SHOW_PX = 110;     // cuánto tienes que bajar (en zona final) para mostrar footer
+            const FOOTER_ZONE_PX = 520;     // solo mostramos footer si estás cerca del final
+            const TOP_SHOW_PX = 24;         // si estás casi arriba, el header siempre visible
+
+            // Elegir contenedor real de scroll (en tu layout suele ser <main>)
+            function getScroller() {
+                if (main && main.scrollHeight > main.clientHeight + 2) return main;
+                return document.scrollingElement || document.documentElement;
+            }
+
+            let scroller = getScroller();
+
+            let lastY = scroller.scrollTop || 0;
+            let accUp = 0;
+            let accDown = 0;
+
+            function resetStatesIfDesktop() {
+                if (!mq.matches) {
+                    header.classList.remove('is-hidden');
+                    footer.classList.remove('is-visible');
+                }
+            }
+
+            function atBottomZone() {
+                const el = scroller;
+                const remaining = el.scrollHeight - (el.scrollTop + el.clientHeight);
+                return remaining <= FOOTER_ZONE_PX;
+            }
+
+            function onScroll() {
+                if (!mq.matches) return;
+
+                // si cambia el scroller (por cambios de layout), lo reenganchamos
+                const maybe = getScroller();
+                if (maybe !== scroller) {
+                    scroller.removeEventListener('scroll', onScroll);
+                    scroller = maybe;
+                    lastY = scroller.scrollTop || 0;
+                    scroller.addEventListener('scroll', onScroll, { passive: true });
+                    return;
+                }
+
+                const y = scroller.scrollTop || 0;
+                const delta = y - lastY;
+
+                if (Math.abs(delta) < 2) {
+                    lastY = y;
+                    return;
+                }
+
+                // Near top: header siempre visible, footer fuera
+                if (y <= TOP_SHOW_PX) {
+                    header.classList.remove('is-hidden');
+                    footer.classList.remove('is-visible');
+                    accUp = 0;
+                    accDown = 0;
+                    lastY = y;
+                    return;
+                }
+
+                if (delta > 0) {
+                    // Bajando
+                    accDown += delta;
+                    accUp = 0;
+
+                    // Header: se esconde con un gesto claro hacia abajo
+                    if (accDown >= HEADER_HIDE_PX) {
+                        header.classList.add('is-hidden');
+                    }
+
+                    // Footer: SOLO si estás cerca del final y sigues bajando con intención
+                    if (atBottomZone() && accDown >= FOOTER_SHOW_PX) {
+                        footer.classList.add('is-visible');
+                    } else {
+                        footer.classList.remove('is-visible');
+                    }
+                } else {
+                    // Subiendo
+                    accUp += Math.abs(delta);
+                    accDown = 0;
+
+                    // Header: aparece rápido al subir (que no tengas que pelearte)
+                    if (accUp >= HEADER_SHOW_PX) {
+                        header.classList.remove('is-hidden');
+                    }
+
+                    // Footer: al subir desaparece siempre
+                    footer.classList.remove('is-visible');
+                }
+
+                lastY = y;
+            }
+
+            // Reenganchar scroll en el contenedor correcto
+            scroller.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', () => {
+                resetStatesIfDesktop();
+                const maybe = getScroller();
+                if (maybe !== scroller) {
+                    scroller.removeEventListener('scroll', onScroll);
+                    scroller = maybe;
+                    lastY = scroller.scrollTop || 0;
+                    scroller.addEventListener('scroll', onScroll, { passive: true });
+                }
+            });
+
+            resetStatesIfDesktop();
+        })();
+    </script>
+</body>
+</html>

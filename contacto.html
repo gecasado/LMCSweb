@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Leathermen Club of Spain">
+    <title>Contacto - Leathermen Club of Spain</title>
+    <meta name="description" content="Contacta con el Leathermen Club of Spain. Estamos aquí para ayudarte.">
+    <meta name="keywords" content="Leathermen, Club, España, Contacto, Email, Información, LMCS">
+    <link rel="icon" type="image/png" href="images/iconLMCS.png">
+    <meta property="og:title" content="Contacto - Leathermen Club of Spain">
+    <meta property="og:description" content="Contacta con el Leathermen Club of Spain.">
+    <meta property="og:image" content="https://XXXX/images/og-image.png">
+    <meta property="og:url" content="https://XXXX/contacto.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contacto - Leathermen Club of Spain">
+    <meta name="twitter:description" content="Contacta con el Leathermen Club of Spain.">
+    <meta name="twitter:image" content="https://XXXX/images/og-image.png">
+    <meta name="theme-color" content="#2C4A7C">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img loading="lazy" src="images/logoLMCS_black.png" alt="Leathermen Club of Spain Logo">
+                <span>LEATHERMEN CLUB OF SPAIN</span>
+            </div>
+            <nav>
+                <button class="nav-toggle" aria-label="Abrir/cerrar menú" aria-expanded="false" aria-controls="main-menu" type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="main-menu" class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="hazte-socio.html">Hazte Socio</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <div class="contact-container">
+            <h1>Contacto</h1>
+            <p class="contact-intro">¿Tienes alguna pregunta? Estamos aquí para ayudarte. Puedes contactarnos a través de cualquiera de estos medios:</p>
+
+            <!-- Sección de contacto directo -->
+            <div class="contact-grid">
+                
+                <!-- Email -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>leathermenclubspain@gmail.com</p>
+                    <a href="mailto:leathermenclubspain@gmail.com" class="btn-contact">Enviar Email</a>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-share-nodes"></i>
+                    </div>
+                    <h3>Redes Sociales</h3>
+                    <p>Síguenos en nuestras redes</p>
+                    <div class="social-buttons">
+                        <a href="https://www.instagram.com/leathermen_club_of_spain_lmcs" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/leathermenclubofspain/" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>+34 636 68 80 63</p>
+                    <a href="https://wa.me/34636688063?text=Hola,%20me%20gustaría%20información%20sobre%20el%20club" target="_blank" class="btn-contact">Abrir WhatsApp</a>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="mailto:leathermenclubspain@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.instagram.com/leathermen_club_of_spain_lmcs" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/leathermenclubofspain/" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://wa.me/34636688063" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="copyright-line">
+            <p>&copy; 2025 Leathermen Club of Spain. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const btn = document.querySelector('.nav-toggle');
+            const menu = document.querySelector('nav ul.nav-menu');
+            if (!btn || !menu) return;
+
+            btn.addEventListener('click', () => {
+                const isOpen = menu.classList.toggle('open');
+                btn.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            // Cierra el menú al clicar un link (móvil)
+            menu.querySelectorAll('a').forEach((a) => {
+                a.addEventListener('click', () => {
+                    menu.classList.remove('open');
+                    btn.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // Si vuelves a desktop, resetea estado
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) {
+                    menu.classList.remove('open');
+                    btn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
