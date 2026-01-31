@@ -155,7 +155,8 @@
                 direccion: 'Calle Fray Ceferino González, 4, Madrid',
                 logo: 'images/26d.png',
                 horario: '18:00',
-                especial: false
+                especial: false,
+                cartel: 'images/galeria/2026/enero2026.jpeg'
             },
             {
                 id: 'mls-febrero',
@@ -167,7 +168,8 @@
                 direccion: 'Calle de Muñoz Torrero, 5',
                 logo: 'images/ingrato.png',
                 horario: '18:00',
-                especial: false
+                especial: false,
+                cartel: 'images/galeria/2026/febrero2026.png'
             },
             {
                 id: 'mls-marzo',
@@ -179,7 +181,8 @@
                 direccion: 'Calle Marqués de Leganés, 12, Madrid',
                 logo: 'images/inklub.png',
                 horario: '18:00',
-                especial: false
+                especial: false,
+                cartel: 'images/galeria/2026/marzo2026.png'
             },
             {
                 id: 'iberian-meetup',
@@ -192,7 +195,8 @@
                 direccion: 'Badajoz',
                 logo: 'images/logoLMCS_black.png',
                 horario: 'Viernes a Domingo',
-                especial: true
+                especial: true,
+                cartel: 'images/galeria/2026/iberian2026.png'
             },
             {
                 id: 'bluf-abril',
@@ -368,33 +372,42 @@
                 statusClass = 'futuro';
             }
             
+            const cartelHtml = evento.cartel
+                ? `<div class="evento-card-image">
+                       <img loading="lazy" src="${evento.cartel}" alt="${evento.titulo}">
+                   </div>`
+                : '';
+
             return `
-                <div class="${clases.join(' ')}" id="${evento.id}">
+                <div class="${clases.join(' ')}${evento.cartel ? ' has-cartel' : ''}" id="${evento.id}">
                     <div class="evento-card-header">
                         <div class="fecha">
                             <i class="fas fa-calendar-alt"></i>
                             ${evento.fechaTexto} 2026
                         </div>
-                        ${evento.especial ? '<div class="special-badge"><i class="fas fa-star"></i> Especial</div>' : ''}
+                        ${evento.especial ? '<div class="special-badge"><i class="fas fa-star"></i></div>' : ''}
                         <h3>${evento.titulo}</h3>
                     </div>
-                    <div class="evento-card-body">
-                        <p class="evento-description">${evento.descripcion}</p>
-                        <div class="evento-info-grid">
-                            <div class="evento-ubicacion">
-                                <img loading="lazy" src="${evento.logo}" alt="${evento.ubicacion}" class="ubicacion-logo" onerror="this.src='images/logoLMCS_black.png'">
-                                <div class="ubicacion-info">
-                                    <div class="ubicacion-nombre">${evento.ubicacion}</div>
-                                    <div class="ubicacion-direccion">${evento.direccion}</div>
+                    <div class="evento-card-lower">
+                        ${cartelHtml}
+                        <div class="evento-card-body">
+                            <p class="evento-description">${evento.descripcion}</p>
+                            <div class="evento-info-grid">
+                                <div class="evento-ubicacion">
+                                    <img loading="lazy" src="${evento.logo}" alt="${evento.ubicacion}" class="ubicacion-logo" onerror="this.src='images/logoLMCS_black.png'">
+                                    <div class="ubicacion-info">
+                                        <div class="ubicacion-nombre">${evento.ubicacion}</div>
+                                        <div class="ubicacion-direccion">${evento.direccion}</div>
+                                    </div>
+                                </div>
+                                <div class="evento-horario">
+                                    <i class="fas fa-clock"></i>
+                                    <span class="horario-text">${evento.horario}</span>
                                 </div>
                             </div>
-                            <div class="evento-horario">
-                                <i class="fas fa-clock"></i>
-                                <span class="horario-text">${evento.horario}</span>
+                            <div class="evento-status ${statusClass}">
+                                ${statusText}
                             </div>
-                        </div>
-                        <div class="evento-status ${statusClass}">
-                            ${statusText}
                         </div>
                     </div>
                 </div>
