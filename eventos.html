@@ -449,6 +449,14 @@
 
             if (prevBtn) prevBtn.addEventListener('click', () => scrollTimeline(-1));
             if (nextBtn) nextBtn.addEventListener('click', () => scrollTimeline(1));
+
+            // Centrar timeline en el evento próximo
+            const nextItem = document.querySelector('.timeline-item.next');
+            if (nextItem && scroller) {
+                const itemCenter = nextItem.offsetLeft + nextItem.offsetWidth / 2;
+                const scrollLeft = itemCenter - scroller.clientWidth / 2;
+                scroller.scrollLeft = Math.max(0, scrollLeft);
+            }
         });
 
         // ========================================

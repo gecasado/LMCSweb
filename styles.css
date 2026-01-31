@@ -210,6 +210,7 @@ nav ul li a.active {
 main {
     flex: 1;
     width: 100%;
+    min-width: 0;
     margin: 0 auto;
     padding: 0;
     display: flex;
@@ -240,6 +241,7 @@ main:has(.club-logo-section) {
 main:has(.eventos-page) {
     max-width: 100%;
     padding: 0;
+    overflow-x: hidden;
 }
 
 /* Instruccion del formulario */
@@ -1565,6 +1567,9 @@ main:has(.eventos-page) {
     max-width: 1800px;
     margin: 0 auto;
     padding: 40px 50px;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .eventos-page h1 {
@@ -1581,34 +1586,54 @@ main:has(.eventos-page) {
     margin-bottom: 40px;
 }
 
+/* --- Timeline Scroll Container --- */
+
+.timeline-scroll {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 50px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.timeline-arrow {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--lmcs-blue);
+    background: #ffffff;
+    color: var(--lmcs-blue);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.timeline-arrow:hover {
+    background: var(--lmcs-blue);
+    color: #ffffff;
+}
+
 /* --- Timeline Horizontal --- */
 
 .timeline-horizontal {
     position: relative;
-    padding: 20px 0 40px;
-    margin-bottom: 50px;
-    width: 100%;
-    max-width: 100%;
+    padding: 20px 0 20px;
+    flex: 1;
+    min-width: 0;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: contain;
     overflow-x: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--lmcs-blue) #e0e0e0;
+    scrollbar-width: none;
 }
 
 .timeline-horizontal::-webkit-scrollbar {
-    height: 8px;
-}
-
-.timeline-horizontal::-webkit-scrollbar-track {
-    background: #e0e0e0;
-    border-radius: 4px;
-}
-
-.timeline-horizontal::-webkit-scrollbar-thumb {
-    background: var(--lmcs-blue);
-    border-radius: 4px;
+    display: none;
 }
 
 .timeline-wrapper {
@@ -1616,7 +1641,6 @@ main:has(.eventos-page) {
     flex-wrap: nowrap;
     align-items: flex-start;
     width: max-content;
-    min-width: max-content;
     padding: 20px 40px;
     position: relative;
 }
@@ -1778,7 +1802,7 @@ main:has(.eventos-page) {
 
 .eventos-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 25px;
 }
 
@@ -2426,10 +2450,6 @@ footer img {
     .contact-container {
         max-width: 1600px;
     }
-
-    .eventos-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
 }
 
 /* --- PANTALLAS MUY GRANDES (1700px+) --- */
@@ -2458,9 +2478,6 @@ footer img {
 
 /* --- MEDIANAS-GRANDES (max 1600px) --- */
 @media (max-width: 1600px) {
-    .eventos-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 /* --- MEDIANAS-GRANDES (max 1400px) --- */
@@ -2518,10 +2535,6 @@ footer img {
 
     .eventos-page {
         padding: 40px 30px;
-    }
-
-    .eventos-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 
