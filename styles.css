@@ -1,35 +1,55 @@
 /* ========================================
    TABLA DE CONTENIDOS
    ========================================
+   0. VARIABLES CSS
    1. RESET Y ESTILOS GENERALES
    2. HEADER (CABECERA)
    3. LOGO
-   4. NAVEGACIÓN (MENÚ)
-   5. MENÚ HAMBURGUESA (MÓVIL)
+   4. NAVEGACION (MENU)
+   5. MENU HAMBURGUESA (MOVIL)
    6. CONTENIDO PRINCIPAL (MAIN)
-   7. TYPEFORM CONTAINER
-   8. CONTACTO
-   9. UBICACIÓN
-   10. GALERÍA - AÑOS
-   11. GALERÍA - EVENTOS DEL AÑO
-   12. GALERÍA - CAROUSEL DEL EVENTO
-   13. GALERÍA - CAROUSEL GENERAL
-   14. FOOTER
-   15. RESPONSIVE GENERAL
+   7. HOME (index.html)
+   8. TYPEFORM CONTAINER
+   9. CONTACTO
+   10. UBICACION
+   11. GALERIA - AÑOS
+   12. GALERIA - EVENTOS DEL AÑO
+   13. GALERIA - CAROUSEL DEL EVENTO
+   14. GALERIA - CAROUSEL GENERAL
+   15. EVENTOS (eventos.html)
+   16. NOSOTROS (nosotros.html)
+   17. MR. LEATHER SPAIN
+   18. ECMC
+   19. CLUBS HERMANADOS
+   20. COLABORADORES
+   21. SPONSORS
+   22. FOOTER
+   23. RESPONSIVE
    ======================================== */
+
+/* ========================================
+   0. VARIABLES CSS
+   ======================================== */
+
+:root {
+    --lmcs-blue: #164C79;
+    --lmcs-blue-10: rgba(22, 76, 121, 0.10);
+    --lmcs-blue-15: rgba(22, 76, 121, 0.15);
+    --lmcs-blue-35: rgba(22, 76, 121, 0.35);
+    --lmcs-blue-80: rgba(22, 76, 121, 0.80);
+    --lmcs-blue-95: rgba(22, 76, 121, 0.95);
+}
 
 /* ========================================
    1. RESET Y ESTILOS GENERALES
    ======================================== */
 
-/* Reset básico: quita márgenes y padding por defecto */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Altura completa */
 html,
 body {
     height: 100%;
@@ -37,7 +57,6 @@ body {
     background: #ffffff;
 }
 
-/* Estilos del body (toda la página) */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
@@ -49,19 +68,34 @@ body {
     background: #ffffff;
 }
 
+/* Titulos generales */
+h1, h2, h3, h4 {
+    color: var(--lmcs-blue);
+}
+
+/* Iconos generales */
+i,
+.stat-item i,
+.meta-item i,
+.event-date i,
+.event-photos i,
+.event-date-header i,
+.instagram-credit i {
+    color: var(--lmcs-blue);
+}
+
 /* ========================================
    2. HEADER (CABECERA)
    ======================================== */
 
 header {
     background: #ffffff;
-    color: #164c79;
+    color: var(--lmcs-blue);
     padding: 10px 0;
     box-shadow: none;
     flex: 0 0 auto;
 }
 
-/* Contenedor: centra el contenido */
 .container {
     min-width: 0;
     width: 100%;
@@ -95,7 +129,7 @@ header {
 .logo span {
     font-size: 1.25rem;
     font-weight: bold;
-    color: #164c79;
+    color: var(--lmcs-blue);
     line-height: 1.1;
     white-space: nowrap;
     overflow: hidden;
@@ -103,7 +137,7 @@ header {
 }
 
 /* ========================================
-   4. NAVEGACIÓN (MENÚ)
+   4. NAVEGACION (MENU)
    ======================================== */
 
 nav {
@@ -124,7 +158,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #164c79;
+    color: var(--lmcs-blue);
     text-decoration: none;
     font-size: 1rem;
     font-weight: 600;
@@ -134,16 +168,16 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: rgba(22, 76, 121, 0.10);
+    background-color: var(--lmcs-blue-10);
 }
 
 nav ul li a.active {
-    background-color: rgba(22, 76, 121, 0.15);
+    background-color: var(--lmcs-blue-15);
     font-weight: 700;
 }
 
 /* ========================================
-   5. MENÚ HAMBURGUESA (SOLO MÓVIL)
+   5. MENU HAMBURGUESA (SOLO MOVIL)
    ======================================== */
 
 .nav-toggle {
@@ -156,7 +190,7 @@ nav ul li a.active {
 }
 
 .nav-toggle:focus {
-    outline: 2px solid rgba(22, 76, 121, 0.35);
+    outline: 2px solid var(--lmcs-blue-35);
     outline-offset: 2px;
 }
 
@@ -164,7 +198,7 @@ nav ul li a.active {
     display: block;
     width: 26px;
     height: 3px;
-    background: #164c79;
+    background: var(--lmcs-blue);
     margin: 5px 0;
     border-radius: 2px;
 }
@@ -180,11 +214,51 @@ main {
     padding: 0;
     display: flex;
     flex-direction: column;
-    overflow-y: visible; /* scroll en la página, no dentro de main */
+    overflow-y: visible;
     background: #ffffff;
 }
+
+main h1 {
+    color: var(--lmcs-blue);
+    margin-bottom: 20px;
+}
+
+/* Main para paginas de carousel - ancho completo */
+main.carousel-main {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Main ancho completo para nosotros */
+main:has(.club-logo-section) {
+    max-width: 100%;
+    padding: 0;
+}
+
+/* Main ancho completo para eventos */
+main:has(.eventos-page) {
+    max-width: 100%;
+    padding: 0;
+}
+
+/* Instruccion del formulario */
+.form-instruction {
+    padding: 15px 20px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.form-instruction p {
+    color: var(--lmcs-blue);
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+}
+
 /* ========================================
-   HOME (index.html)
+   7. HOME (index.html)
    ======================================== */
 
 .home-main {
@@ -256,7 +330,8 @@ main {
     text-align: center;
 }
 
-/* Botones reutilizables HOME */
+/* --- Botones reutilizables HOME --- */
+
 .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -297,7 +372,8 @@ main {
     transform: translateY(-1px);
 }
 
-/* Próximo evento */
+/* --- Proximo evento --- */
+
 .next-event-card {
     max-width: 900px;
     margin: 0 auto;
@@ -348,7 +424,9 @@ main {
     flex-wrap: wrap;
     justify-content: center;
 }
-/* NUEVA HISTORIA HOME: fondo azul, texto blanco */
+
+/* --- Historia HOME: fondo azul, texto blanco --- */
+
 .home-history {
     text-align: center;
     background: var(--lmcs-blue);
@@ -373,11 +451,13 @@ main {
     background: rgba(255,255,255,0.9);
     color: var(--lmcs-blue);
 }
+
+/* --- Galeria HOME --- */
+
 .home-gallery {
     text-align: center;
 }
 
-/* Carrusel */
 .home-carousel {
     max-width: 980px;
     margin: 0 auto 14px;
@@ -405,7 +485,6 @@ main {
     display: block;
 }
 
-/* HOME carousel: flechas en blanco forzado */
 .carousel-btn {
     width: 56px;
     height: 56px;
@@ -413,16 +492,15 @@ main {
     border: 0;
     cursor: pointer;
     background: var(--lmcs-blue);
-    color: #ffffff; /* flechas en blanco */
+    color: #ffffff;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* Forzar iconos blancos en flechas del carousel HOME */
 .carousel-btn i {
-    color: #ffffff; /* iconos Font Awesome en blanco */
+    color: #ffffff;
 }
 
 .carousel-caption {
@@ -432,54 +510,8 @@ main {
     font-weight: 600;
 }
 
-/* Responsive HOME */
-@media (max-width: 768px) {
-    .home-hero { padding: 50px 16px 36px; }
-    .home-section { padding: 46px 16px; }
-
-    .home-carousel {
-        grid-template-columns: 44px 1fr 44px;
-    }
-
-    .carousel-btn {
-        width: 44px;
-        height: 44px;
-    }
-
-    .carousel-viewport {
-        min-height: 300px;
-    }
-}
-
-/* Main para páginas de carousel - ancho completo */
-main.carousel-main {
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-main h1 {
-    color: #3B5998;
-    margin-bottom: 20px;
-}
-
-/* Instrucción del formulario */
-.form-instruction {
-    padding: 15px 20px;
-    text-align: center;
-    flex-shrink: 0;
-}
-
-.form-instruction p {
-    color: #2C4A7C;
-    font-size: 1.1rem;
-    margin: 0;
-    font-weight: bold;
-    letter-spacing: 0.02em;
-}
-
 /* ========================================
-   7. TYPEFORM CONTAINER
+   8. TYPEFORM CONTAINER
    ======================================== */
 
 .typeform-container {
@@ -491,7 +523,7 @@ main h1 {
 
 .typeform-container h1 {
     text-align: center;
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
     margin-bottom: 15px;
 }
 
@@ -503,7 +535,7 @@ main h1 {
 }
 
 /* ========================================
-   8. CONTACTO
+   9. CONTACTO
    ======================================== */
 
 .contact-container {
@@ -514,7 +546,7 @@ main h1 {
 
 .contact-container h1 {
     text-align: center;
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
@@ -529,7 +561,6 @@ main h1 {
     margin-right: auto;
 }
 
-/* Grid de tarjetas de contacto */
 .contact-grid {
     display: flex;
     flex-direction: row;
@@ -539,8 +570,6 @@ main h1 {
     justify-content: center;
 }
 
-/* Tarjeta individual de contacto */
-/* Cards de contacto: fondo blanco */
 .contact-card {
     background: #ffffff;
     border: 2px solid #e0e0e0;
@@ -554,7 +583,6 @@ main h1 {
     max-width: 350px;
 }
 
-/* Logos e iconos de contacto en azul corporativo */
 .contact-card i,
 .contact-card .social-buttons a {
     color: #ffffff;
@@ -574,12 +602,11 @@ main h1 {
     box-shadow: 0 5px 20px rgba(22, 76, 121, 0.25);
 }
 
-/* Icono de la tarjeta */
 .contact-icon {
     width: 80px;
     height: 80px;
     margin: 0 auto 20px;
-    background: linear-gradient(135deg, #2C4A7C 0%, #3B5998 100%);
+    background: var(--lmcs-blue);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -589,7 +616,7 @@ main h1 {
 }
 
 .contact-card h3 {
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
     font-size: 1.3rem;
     margin-bottom: 10px;
 }
@@ -602,11 +629,10 @@ main h1 {
     overflow-wrap: break-word;
 }
 
-/* Botón de contacto */
 .btn-contact {
     display: inline-block;
     padding: 12px 30px;
-    background: #2C4A7C;
+    background: var(--lmcs-blue) !important;
     color: #ffffff;
     text-decoration: none;
     border-radius: 25px;
@@ -615,11 +641,11 @@ main h1 {
 }
 
 .btn-contact:hover {
-    background: #3B5998;
+    background: var(--lmcs-blue) !important;
+    opacity: 0.9;
     transform: scale(1.05);
 }
 
-/* Botones de redes sociales en la tarjeta */
 .social-buttons {
     display: flex;
     gap: 15px;
@@ -629,7 +655,7 @@ main h1 {
 .social-buttons a {
     width: 45px;
     height: 45px;
-    background: #2C4A7C;
+    background: var(--lmcs-blue) !important;
     color: #ffffff;
     border-radius: 50%;
     display: flex;
@@ -640,12 +666,13 @@ main h1 {
 }
 
 .social-buttons a:hover {
-    background: #3B5998;
+    background: var(--lmcs-blue) !important;
+    opacity: 0.9;
     transform: scale(1.1);
 }
 
 /* ========================================
-   9. UBICACIÓN
+   10. UBICACION
    ======================================== */
 
 .location-section {
@@ -656,7 +683,7 @@ main h1 {
 }
 
 .location-section h2 {
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
     font-size: 2rem;
     margin-bottom: 20px;
 }
@@ -689,7 +716,7 @@ main h1 {
 }
 
 /* ========================================
-   10. GALERÍA - AÑOS
+   11. GALERIA - AÑOS
    ======================================== */
 
 .gallery-years-container {
@@ -700,7 +727,7 @@ main h1 {
 
 .gallery-years-container h1 {
     text-align: center;
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
@@ -712,14 +739,12 @@ main h1 {
     margin-bottom: 50px;
 }
 
-/* Grid de años */
 .years-grid {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-/* Tarjeta de cada año - Layout horizontal */
 .year-card {
     background: #fff;
     border-radius: 15px;
@@ -736,7 +761,6 @@ main h1 {
     box-shadow: 0 10px 40px rgba(44, 74, 124, 0.3);
 }
 
-/* Imagen del año - Izquierda */
 .year-image {
     position: relative;
     width: 40%;
@@ -756,12 +780,10 @@ main h1 {
     transform: scale(1.05);
 }
 
-/* Overlay sobre la imagen - removido */
 .year-overlay {
     display: none;
 }
 
-/* Información del año - Derecha */
 .year-info {
     padding: 40px;
     display: flex;
@@ -771,7 +793,7 @@ main h1 {
 }
 
 .year-info h3 {
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
     font-size: 3rem;
     margin-bottom: 20px;
     font-weight: 700;
@@ -784,7 +806,6 @@ main h1 {
     font-size: 1.1rem;
 }
 
-/* Stats del año */
 .year-stats-info {
     display: flex;
     gap: 30px;
@@ -799,7 +820,7 @@ main h1 {
 
 .stat-item i {
     font-size: 1.5rem;
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
 }
 
 .stat-item span {
@@ -808,11 +829,10 @@ main h1 {
     font-weight: 600;
 }
 
-/* Botón de ver eventos */
 .btn-year {
     display: inline-block;
     padding: 15px 35px;
-    background: linear-gradient(135deg, #2C4A7C 0%, #3B5998 100%);
+    background: var(--lmcs-blue) !important;
     color: white;
     text-decoration: none;
     border-radius: 30px;
@@ -823,7 +843,8 @@ main h1 {
 }
 
 .btn-year:hover {
-    background: linear-gradient(135deg, #3B5998 0%, #2C4A7C 100%);
+    background: var(--lmcs-blue) !important;
+    opacity: 0.9;
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(44, 74, 124, 0.4);
 }
@@ -838,16 +859,16 @@ main h1 {
 }
 
 /* ========================================
-   11. GALERÍA - EVENTOS DEL AÑO
+   12. GALERIA - EVENTOS DEL AÑO
    ======================================== */
 
 .events-year-container {
-    max-width: 1200px;
+    max-width: 1600px;
+    width: 100%;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
-/* Header de eventos */
 .events-header {
     text-align: center;
     margin-bottom: 50px;
@@ -855,7 +876,7 @@ main h1 {
 }
 
 .events-header h1 {
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
     font-size: 2.5rem;
     margin-bottom: 15px;
 }
@@ -865,7 +886,6 @@ main h1 {
     font-size: 1.1rem;
 }
 
-/* Botón volver */
 .btn-back {
     position: absolute;
     left: 0;
@@ -875,7 +895,7 @@ main h1 {
     gap: 8px;
     padding: 10px 20px;
     background: #f5f5f5;
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
     text-decoration: none;
     border-radius: 25px;
     font-weight: 600;
@@ -883,19 +903,19 @@ main h1 {
 }
 
 .btn-back:hover {
-    background: #2C4A7C;
+    background: var(--lmcs-blue);
     color: white;
     transform: translateX(-5px);
 }
 
-/* Lista de eventos (horizontal) */
+/* --- Lista de eventos (horizontal) --- */
+
 .events-list {
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-/* Item de evento (horizontal) */
 .event-item {
     background: #fff;
     border-radius: 15px;
@@ -911,7 +931,6 @@ main h1 {
     box-shadow: 0 10px 30px rgba(44, 74, 124, 0.3);
 }
 
-/* Imagen del evento - Izquierda */
 .event-item-image {
     width: 45%;
     min-width: 400px;
@@ -930,7 +949,6 @@ main h1 {
     transform: scale(1.05);
 }
 
-/* Info del evento - Derecha */
 .event-item-info {
     padding: 40px;
     display: flex;
@@ -940,7 +958,7 @@ main h1 {
 }
 
 .event-item-info h2 {
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
     font-size: 2.5rem;
     margin-bottom: 20px;
     font-weight: 700;
@@ -953,7 +971,6 @@ main h1 {
     margin-bottom: 30px;
 }
 
-/* Meta información del evento */
 .event-meta {
     display: flex;
     flex-direction: column;
@@ -971,18 +988,17 @@ main h1 {
 
 .meta-item i {
     font-size: 1.2rem;
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
     width: 20px;
     text-align: center;
 }
 
-/* Botón de ver fotos */
 .btn-view-photos {
     display: inline-flex;
     align-items: center;
     gap: 10px;
     padding: 15px 35px;
-    background: linear-gradient(135deg, #2C4A7C 0%, #3B5998 100%);
+    background: var(--lmcs-blue) !important;
     color: white;
     text-decoration: none;
     border-radius: 30px;
@@ -993,7 +1009,8 @@ main h1 {
 }
 
 .btn-view-photos:hover {
-    background: linear-gradient(135deg, #3B5998 0%, #2C4A7C 100%);
+    background: var(--lmcs-blue) !important;
+    opacity: 0.9;
     transform: scale(1.05);
     box-shadow: 0 5px 20px rgba(44, 74, 124, 0.4);
 }
@@ -1002,14 +1019,15 @@ main h1 {
     font-size: 1.3rem;
 }
 
-/* Grid de eventos (mantener para compatibilidad) */
+/* --- Grid de eventos (tarjetas) --- */
+
 .events-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: stretch;
 }
 
-/* Tarjeta de evento */
 .event-card {
     background: #fff;
     border-radius: 15px;
@@ -1017,6 +1035,10 @@ main h1 {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 240px;
 }
 
 .event-card:hover {
@@ -1024,74 +1046,71 @@ main h1 {
     box-shadow: 0 10px 30px rgba(44, 74, 124, 0.3);
 }
 
-/* Evento destacado/especial */
 .event-featured {
     border: 3px solid #FFD700;
 }
 
-/* Imagen del evento */
 .event-image {
     position: relative;
-    height: 250px;
+    width: 40%;
+    min-width: 240px;
     overflow: hidden;
 }
 
 .event-image img {
     width: 100%;
     height: 100%;
+    min-height: 240px;
     object-fit: cover;
     transition: transform 0.5s ease;
+    display: block;
 }
 
 .event-card:hover .event-image img {
     transform: scale(1.1);
 }
 
-/* Badge de fecha */
-.event-badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: rgba(44, 74, 124, 0.95);
-    color: white;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    backdrop-filter: blur(10px);
-}
-
-.event-badge.featured {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-    color: #000;
-}
-
-/* Label de evento especial */
 .featured-label {
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 18px;
+    right: 22px;
     background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
     color: #000;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-weight: 700;
-    font-size: 0.85rem;
-    display: flex;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 0.8rem;
+    display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
+    z-index: 2;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* Info del evento */
+.featured-label:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+.event-card:hover .featured-label {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
 .event-info {
-    padding: 25px;
+    position: relative;
+    padding: 28px 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .event-info h3 {
-    color: #2C4A7C;
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    min-height: 60px;
+    color: var(--lmcs-blue);
+    font-size: 1.35rem;
+    margin-bottom: 14px;
+    min-height: 0;
 }
 
 .event-date,
@@ -1106,43 +1125,50 @@ main h1 {
 
 .event-date i,
 .event-photos i {
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
 }
 
-/* Botón de ver fotos (tarjeta) */
 .btn-event {
-    display: inline-block;
-    padding: 12px 25px;
-    background: linear-gradient(135deg, #2C4A7C 0%, #3B5998 100%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 12px 26px;
+    background: var(--lmcs-blue) !important;
     color: white;
     text-decoration: none;
-    border-radius: 25px;
-    font-weight: 600;
+    border-radius: 999px;
+    font-weight: 700;
     transition: all 0.3s ease;
-    margin-top: 10px;
+    margin-top: auto;
+    width: 100%;
+    align-self: stretch;
 }
 
 .btn-event:hover {
-    background: linear-gradient(135deg, #3B5998 0%, #2C4A7C 100%);
+    background: var(--lmcs-blue) !important;
+    opacity: 0.9;
     transform: scale(1.05);
 }
 
 .btn-event i {
-    margin-left: 5px;
+    display: none;
 }
 
-/* Botón deshabilitado (próximamente) */
 .btn-event.btn-disabled {
     background: #ccc;
     cursor: not-allowed;
     pointer-events: none;
 }
 
+.event-badge {
+    background: var(--lmcs-blue);
+}
+
 /* ========================================
-   12. GALERÍA - CAROUSEL DEL EVENTO
+   13. GALERIA - CAROUSEL DEL EVENTO
    ======================================== */
 
-/* Box-sizing para todos los elementos del carousel */
 .carousel-main *,
 .carousel-container *,
 .eventSwiper * {
@@ -1165,7 +1191,8 @@ main h1 {
     box-sizing: border-box;
 }
 
-/* Header del carousel */
+/* --- Header del carousel --- */
+
 .carousel-header {
     margin-bottom: 30px;
     position: relative;
@@ -1177,7 +1204,7 @@ main h1 {
     gap: 8px;
     padding: 12px 24px;
     background: #f5f5f5;
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
     text-decoration: none;
     border-radius: 30px;
     font-weight: 600;
@@ -1186,7 +1213,7 @@ main h1 {
 }
 
 .btn-back-carousel:hover {
-    background: #2C4A7C;
+    background: var(--lmcs-blue);
     color: white;
     transform: translateX(-5px);
 }
@@ -1196,13 +1223,13 @@ main h1 {
 }
 
 .event-title h1 {
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
     font-size: 2.5rem;
     margin-bottom: 5px;
 }
 
 .event-title h2 {
-    color: #3B5998;
+    color: var(--lmcs-blue);
     font-size: 1.8rem;
     font-weight: 500;
     margin-bottom: 10px;
@@ -1214,11 +1241,10 @@ main h1 {
 }
 
 .event-date-header i {
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
     margin-right: 5px;
 }
 
-/* Crédito Instagram (icono azul + texto gris, sin morado de link) */
 .event-credit {
     margin-top: 6px;
 }
@@ -1237,7 +1263,7 @@ main h1 {
 }
 
 .instagram-credit i {
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
     font-size: 1.05em;
 }
 
@@ -1246,7 +1272,8 @@ main h1 {
     opacity: 0.9;
 }
 
-/* Swiper del evento */
+/* --- Swiper del evento --- */
+
 .eventSwiper {
     width: 100%;
     max-width: 100%;
@@ -1277,11 +1304,10 @@ main h1 {
     margin: 0 auto;
 }
 
-/* Flechas de navegación del carousel */
 .eventSwiper .swiper-button-next,
 .eventSwiper .swiper-button-prev {
     color: white;
-    background: rgba(44, 74, 124, 0.8);
+    background: var(--lmcs-blue);
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -1298,7 +1324,8 @@ main h1 {
 
 .eventSwiper .swiper-button-next:hover,
 .eventSwiper .swiper-button-prev:hover {
-    background: rgba(44, 74, 124, 1);
+    background: var(--lmcs-blue);
+    opacity: 0.9;
     transform: scale(1.1);
 }
 
@@ -1306,9 +1333,11 @@ main h1 {
 .eventSwiper .swiper-button-prev::after {
     font-size: 24px;
     font-weight: 900;
+    color: #ffffff !important;
 }
 
-/* Controles del carousel */
+/* --- Controles del carousel --- */
+
 .carousel-controls {
     margin-top: 30px;
     max-width: 100%;
@@ -1317,7 +1346,6 @@ main h1 {
     box-sizing: border-box;
 }
 
-/* Barra de progreso */
 .progress-bar-container {
     width: 100%;
     height: 8px;
@@ -1329,13 +1357,12 @@ main h1 {
 
 .progress-bar {
     height: 100%;
-    background: linear-gradient(90deg, #2C4A7C 0%, #3B5998 50%, #FF6B35 100%);
+    background: var(--lmcs-blue);
     border-radius: 10px;
     transition: width 0.3s ease;
     width: 2%;
 }
 
-/* Controles inferiores */
 .controls-bottom {
     display: flex;
     justify-content: space-between;
@@ -1347,7 +1374,6 @@ main h1 {
     box-sizing: border-box;
 }
 
-/* Contador de fotos */
 .photo-counter {
     font-size: 1.1rem;
     color: #333;
@@ -1360,7 +1386,7 @@ main h1 {
 
 .counter-current {
     font-size: 1.7rem;
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
     font-weight: 700;
 }
 
@@ -1374,7 +1400,6 @@ main h1 {
     font-size: 0.95rem;
 }
 
-/* Botones de acción */
 .action-buttons {
     display: flex;
     gap: 8px;
@@ -1384,7 +1409,7 @@ main h1 {
 
 .btn-action {
     padding: 10px 16px;
-    background: linear-gradient(135deg, #2C4A7C 0%, #3B5998 100%);
+    background: var(--lmcs-blue) !important;
     color: white;
     border: none;
     border-radius: 30px;
@@ -1400,16 +1425,18 @@ main h1 {
 
 .btn-action i {
     font-size: 1.1rem;
+    color: #ffffff !important;
 }
 
 .btn-action:hover {
-    background: linear-gradient(135deg, #3B5998 0%, #2C4A7C 100%);
+    background: var(--lmcs-blue) !important;
+    opacity: 0.9;
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(44, 74, 124, 0.4);
 }
 
 /* ========================================
-   13. GALERÍA - CAROUSEL GENERAL
+   14. GALERIA - CAROUSEL GENERAL
    ======================================== */
 
 .gallery-container {
@@ -1420,12 +1447,11 @@ main h1 {
 
 .gallery-container h1 {
     text-align: center;
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-/* Swiper Container */
 .swiper {
     width: 100%;
     height: 600px;
@@ -1448,7 +1474,6 @@ main h1 {
     object-fit: contain;
 }
 
-/* Caption de la imagen */
 .slide-caption {
     position: absolute;
     bottom: 0;
@@ -1476,11 +1501,10 @@ main h1 {
     margin-bottom: 15px;
 }
 
-/* Botón de descarga */
 .btn-download {
     display: inline-block;
     padding: 10px 20px;
-    background: #2C4A7C;
+    background: var(--lmcs-blue);
     color: white;
     text-decoration: none;
     border-radius: 25px;
@@ -1489,7 +1513,8 @@ main h1 {
 }
 
 .btn-download:hover {
-    background: #3B5998;
+    background: var(--lmcs-blue);
+    opacity: 0.9;
     transform: scale(1.05);
 }
 
@@ -1497,11 +1522,10 @@ main h1 {
     margin-right: 5px;
 }
 
-/* Flechas de navegación */
 .swiper-button-next,
 .swiper-button-prev {
     color: white;
-    background: rgba(44, 74, 124, 0.8);
+    background: var(--lmcs-blue);
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -1510,16 +1534,17 @@ main h1 {
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-    background: rgba(44, 74, 124, 1);
+    background: var(--lmcs-blue);
+    opacity: 0.9;
     transform: scale(1.1);
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
     font-size: 20px;
+    color: #ffffff !important;
 }
 
-/* Paginación (puntos) */
 .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
@@ -1529,520 +1554,12 @@ main h1 {
 
 .swiper-pagination-bullet-active {
     opacity: 1;
-    background: #2C4A7C;
+    background: var(--lmcs-blue);
 }
 
 /* ========================================
-   14. FOOTER
+   15. EVENTOS (eventos.html)
    ======================================== */
-
-footer {
-    background: linear-gradient(180deg, #2C4A7C 0%, #1a1a1a 100%);
-    color: #ffffff;
-    padding: 10px 0;
-    margin-top: 0;
-    flex: 0 0 auto;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Redes sociales */
-.social-links {
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.social-links a {
-    color: #ffffff;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #cccccc;
-    transform: translateY(-3px);
-}
-
-/* Línea de copyright */
-.copyright-line {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.copyright-line p {
-    color: #ffffff;
-    font-size: 0.85rem;
-    margin: 0;
-}
-
-/* ========================================
-   15. RESPONSIVE
-   ======================================== */
-
-/* --- PANTALLAS EXTRA GRANDES (1600px+) --- */
-@media (min-width: 1600px) {
-    .contact-container {
-        max-width: 1600px;
-    }
-}
-
-/* --- PANTALLAS GRANDES (1400px+) --- */
-@media (min-width: 1400px) {
-    .contact-container {
-        max-width: 1400px;
-    }
-
-    .contact-card {
-        padding: 35px 30px;
-        min-width: 300px;
-        max-width: 400px;
-    }
-
-    .contact-card p {
-        font-size: 1.05rem;
-    }
-}
-
-/* --- PANTALLAS MEDIANAS-GRANDES (max 1400px) --- */
-@media (max-width: 1400px) {
-    .carousel-container {
-        max-width: 95%;
-        padding: 30px 15px;
-    }
-
-    .controls-bottom {
-        gap: 10px;
-    }
-
-    .photo-counter {
-        font-size: 1.1rem;
-    }
-
-    .counter-current {
-        font-size: 1.7rem;
-    }
-
-    .btn-action {
-        padding: 10px 16px;
-        font-size: 0.9rem;
-    }
-}
-
-/* --- PANTALLAS MEDIANAS (max 1200px) --- */
-@media (max-width: 1200px) {
-    .controls-bottom {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .photo-counter {
-        justify-content: center;
-        order: 1;
-    }
-
-    .action-buttons {
-        order: 2;
-        justify-content: center;
-    width: 100%;
-    }
-
-    .btn-action {
-        flex: 1;
-        justify-content: center;
-        min-width: 140px;
-    }
-}
-
-/* --- TABLETS (max 1024px) --- */
-@media (max-width: 1024px) {
-    .contact-grid {
-        justify-content: center;
-    }
-
-    .contact-card {
-        flex: 1 1 280px;
-        max-width: 350px;
-    }
-}
-
-/* --- TABLETS Y MÓVILES (max 992px) --- */
-@media (max-width: 992px) {
-    /* Galería años */
-    .year-card {
-        flex-direction: column;
-        min-height: auto;
-    }
-
-    .year-image {
-    width: 100%;
-        min-width: auto;
-        height: 400px;
-    }
-
-    .year-info {
-        padding: 30px;
-    }
-
-    .year-info h3 {
-        font-size: 2.5rem;
-    }
-
-    /* Eventos */
-    .event-item {
-        flex-direction: column;
-    }
-
-    .event-item-image {
-    width: 100%;
-        min-width: auto;
-        height: 350px;
-    }
-
-    .event-item-info {
-        padding: 30px;
-    }
-
-    .event-item-info h2 {
-        font-size: 2rem;
-    }
-}
-
-/* --- MÓVILES (max 768px) --- */
-@media (max-width: 768px) {
-    /* Header - Menú hamburguesa */
-    .nav-toggle {
-        display: inline-flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    header .container {
-        position: relative;
-        flex-direction: row;
-        gap: 10px;
-    }
-
-    header .logo {
-        flex-direction: row;
-        text-align: left;
-        gap: 10px;
-    }
-
-    header .logo img {
-        height: 50px;
-    }
-
-    header .logo span {
-        font-size: 1.25rem;
-        white-space: normal;
-        line-height: 1.2;
-    }
-
-    /* Menú desplegable */
-    nav ul.nav-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 20px;
-        left: 20px;
-        flex-direction: column;
-        gap: 10px;
-        padding: 15px;
-        margin-top: 10px;
-        background: #ffffff;
-        border: 1px solid rgba(22, 76, 121, 0.18);
-        border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        z-index: 999;
-    }
-
-    nav ul.nav-menu.open {
-        display: flex;
-    }
-
-    nav ul.nav-menu li a {
-        display: block;
-        padding: 12px 14px;
-    }
-
-    nav ul {
-        gap: 0;
-    }
-
-    /* Main */
-    main {
-        padding: 0 10px;
-    }
-
-    /* Contacto */
-    .contact-container h1 {
-        font-size: 2rem;
-    }
-
-    .contact-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-card {
-        flex: 1 1 100%;
-    width: 100%;
-        max-width: 100%;
-        min-width: 0;
-    }
-
-    .location-section {
-        padding: 30px 20px;
-    }
-
-    .location-section h2 {
-        font-size: 1.5rem;
-    }
-
-    /* Galería años */
-    .gallery-years-container h1 {
-        font-size: 2rem;
-    }
-
-    .year-image {
-        height: 300px;
-    }
-
-    .year-info {
-        padding: 20px;
-        text-align: center;
-    }
-
-    .year-info h3 {
-        font-size: 2.2rem;
-    }
-
-    .year-info p {
-        font-size: 1rem;
-    }
-
-    .year-stats-info {
-        flex-direction: row;
-        justify-content: center;
-        gap: 25px;
-    }
-
-    .stat-item {
-        gap: 8px;
-    }
-
-    .stat-item i {
-        font-size: 1.2rem;
-    }
-
-    .stat-item span {
-        font-size: 1rem;
-    }
-
-    .btn-year {
-        align-self: center;
-    width: 100%;
-        text-align: center;
-        justify-content: center;
-        display: inline-flex;
-        padding: 14px 30px;
-    }
-
-    /* Eventos */
-    .btn-back {
-        position: static;
-        margin-bottom: 20px;
-    }
-
-    .events-header h1 {
-        font-size: 2rem;
-    }
-
-    .event-item-image {
-        height: 280px;
-    }
-
-    .event-item-info {
-        padding: 25px;
-    }
-
-    .event-item-info h2 {
-        font-size: 1.7rem;
-    }
-
-    .event-description {
-        font-size: 1rem;
-    }
-
-    .meta-item {
-        font-size: 0.95rem;
-    }
-
-    .btn-view-photos {
-    width: 100%;
-        justify-content: center;
-    }
-
-    .events-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .event-image {
-        height: 200px;
-    }
-
-    .event-info h3 {
-        font-size: 1.2rem;
-        min-height: auto;
-    }
-
-    /* Carousel evento */
-    .event-title h1 {
-        font-size: 1.8rem;
-    }
-
-    .event-title h2 {
-        font-size: 1.3rem;
-    }
-
-    .eventSwiper {
-        height: 50vh;
-        min-height: 400px;
-    }
-
-    .eventSwiper .swiper-button-next,
-    .eventSwiper .swiper-button-prev {
-        width: 40px;
-        height: 40px;
-    }
-
-    .eventSwiper .swiper-button-next::after,
-    .eventSwiper .swiper-button-prev::after {
-        font-size: 16px;
-    }
-
-    .controls-bottom {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 15px;
-    }
-
-    .photo-counter {
-        justify-content: center;
-        font-size: 1.1rem;
-    }
-
-    .counter-current {
-        font-size: 1.6rem;
-    }
-
-    .action-buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .btn-action {
-    width: 100%;
-        justify-content: center;
-        padding: 14px 20px;
-    }
-
-    /* Galería general */
-    .gallery-container h1 {
-        font-size: 2rem;
-    }
-
-    .swiper {
-        height: 400px;
-    }
-
-    .slide-caption {
-        padding: 30px 20px 20px;
-    }
-
-    .slide-caption h3 {
-        font-size: 1.2rem;
-    }
-
-    .slide-caption p {
-        font-size: 0.9rem;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-        width: 40px;
-        height: 40px;
-    }
-
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-        font-size: 16px;
-    }
-
-    /* Typeform */
-    .typeform-container {
-        padding: 10px;
-        margin: 20px 0;
-    }
-
-    .typeform-container h1 {
-        font-size: 1.8rem;
-    }
-
-    .typeform-container p {
-        font-size: 1rem;
-    }
-
-    /* Instrucción formulario */
-    .form-instruction {
-        padding: 12px 15px;
-    }
-
-    .form-instruction p {
-        font-size: 0.95rem;
-    }
-
-    /* Footer */
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-
-    .social-links {
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .social-links a {
-        font-size: 1.3rem;
-    }
-}
-
-
-
-
-/* ========================================
-   16. EVENTOS (eventos.html)
-   ======================================== */
-
-/* Permitir que main sea ancho completo en eventos */
-main:has(.eventos-page) {
-    max-width: 100%;
-    padding: 0;
-}
 
 .eventos-page {
     max-width: 1800px;
@@ -2064,7 +1581,8 @@ main:has(.eventos-page) {
     margin-bottom: 40px;
 }
 
-/* Timeline Horizontal */
+/* --- Timeline Horizontal --- */
+
 .timeline-horizontal {
     position: relative;
     padding: 20px 0 40px;
@@ -2076,7 +1594,7 @@ main:has(.eventos-page) {
     overscroll-behavior-x: contain;
     overflow-x: auto;
     scrollbar-width: thin;
-    scrollbar-color: #2C4A7C #e0e0e0;
+    scrollbar-color: var(--lmcs-blue) #e0e0e0;
 }
 
 .timeline-horizontal::-webkit-scrollbar {
@@ -2089,7 +1607,7 @@ main:has(.eventos-page) {
 }
 
 .timeline-horizontal::-webkit-scrollbar-thumb {
-    background: #2C4A7C;
+    background: var(--lmcs-blue);
     border-radius: 4px;
 }
 
@@ -2110,7 +1628,7 @@ main:has(.eventos-page) {
     left: 20px;
     right: 20px;
     height: 4px;
-    background: linear-gradient(90deg, #2C4A7C 0%, #e0e0e0 100%);
+    background: var(--lmcs-blue);
     border-radius: 2px;
 }
 
@@ -2128,7 +1646,7 @@ main:has(.eventos-page) {
 .timeline-dot {
     width: 18px;
     height: 18px;
-    background: #2C4A7C;
+    background: var(--lmcs-blue);
     border: 4px solid #fff;
     border-radius: 50%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -2178,7 +1696,7 @@ main:has(.eventos-page) {
 
 .timeline-date {
     font-size: 0.8rem;
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -2198,7 +1716,8 @@ main:has(.eventos-page) {
     color: #999;
 }
 
-/* Leyenda */
+/* --- Leyenda --- */
+
 .timeline-legend {
     display: flex;
     justify-content: center;
@@ -2223,10 +1742,11 @@ main:has(.eventos-page) {
 
 .legend-dot.past { background: #aaa; }
 .legend-dot.next { background: #E60139; }
-.legend-dot.future { background: #2C4A7C; }
+.legend-dot.future { background: var(--lmcs-blue); }
 .legend-dot.special { background: linear-gradient(135deg, #FFD700, #FFA500); }
 
-/* Secciones de eventos */
+/* --- Secciones de eventos --- */
+
 .eventos-section {
     margin-bottom: 60px;
 }
@@ -2247,21 +1767,21 @@ main:has(.eventos-page) {
 }
 
 .eventos-section-title.regular {
-    border-bottom-color: #2C4A7C;
+    border-bottom-color: var(--lmcs-blue);
 }
 
 .eventos-section-title.regular i {
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
 }
 
-/* Grid de eventos */
+/* --- Grid y tarjetas de evento --- */
+
 .eventos-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 }
 
-/* Tarjeta de evento */
 .evento-card {
     background: #fff;
     border-radius: 16px;
@@ -2285,7 +1805,7 @@ main:has(.eventos-page) {
 }
 
 .evento-card-header {
-    background: linear-gradient(135deg, #2C4A7C 0%, #3B5998 100%);
+    background: var(--lmcs-blue) !important;
     color: white;
     padding: 20px;
     position: relative;
@@ -2293,11 +1813,11 @@ main:has(.eventos-page) {
 }
 
 .evento-card.past .evento-card-header {
-    background: linear-gradient(135deg, #777 0%, #999 100%);
+    background: linear-gradient(135deg, #777 0%, #999 100%) !important;
 }
 
 .evento-card.special .evento-card-header {
-    background: linear-gradient(135deg, #1a365d 0%, #2C4A7C 100%);
+    background: var(--lmcs-blue) !important;
 }
 
 .evento-card-header .fecha {
@@ -2346,7 +1866,6 @@ main:has(.eventos-page) {
     min-height: 45px;
 }
 
-/* Info de ubicación y horario */
 .evento-info-grid {
     display: flex;
     flex-direction: column;
@@ -2401,7 +1920,7 @@ main:has(.eventos-page) {
 
 .evento-horario i {
     font-size: 1rem;
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
 }
 
 .evento-horario .horario-text {
@@ -2410,7 +1929,8 @@ main:has(.eventos-page) {
     color: #333;
 }
 
-/* Estado del evento */
+/* --- Estado del evento --- */
+
 .evento-status {
     display: inline-flex;
     align-items: center;
@@ -2433,23 +1953,27 @@ main:has(.eventos-page) {
 
 .evento-status.futuro {
     background: rgba(44, 74, 124, 0.1);
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
 }
 
 /* ========================================
-   17. NOSOTROS (nosotros.html)
+   16. NOSOTROS (nosotros.html)
    ======================================== */
 
 .nosotros-page {
-    /* En Nosotros, los fondos de color deben llegar hasta el borde */
     max-width: 100%;
     margin: 0;
     padding: 0;
 }
 
+body.nosotros-page {
+    background: #ffffff;
+}
+
 .club-logo-section {
     text-align: center;
     padding: 60px 20px;
+    background: #ffffff;
 }
 
 .club-logo-section img {
@@ -2459,7 +1983,7 @@ main:has(.eventos-page) {
 
 .historia-section {
     padding: 60px 20px;
-    background: #f8f9fa;
+    background: #ffffff;
 }
 
 .section-title {
@@ -2472,16 +1996,37 @@ main:has(.eventos-page) {
 }
 
 .historia-content {
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
     font-size: 1.1rem;
     line-height: 1.8;
     color: #555;
-    text-align: center;
+    text-align: left;
+}
+
+.historia-content p {
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+}
+
+.historia-content ul {
+    margin: 2rem 0;
+    padding-left: 1.2rem;
+}
+
+.historia-content li {
+    margin-bottom: 0.6rem;
+}
+
+.historia-content,
+.historia-content p,
+.historia-content li {
+    color: #000000 !important;
 }
 
 .junta-section {
     padding: 80px 20px;
+    background: #ffffff;
 }
 
 .junta-grid {
@@ -2526,15 +2071,10 @@ main:has(.eventos-page) {
     color: var(--lmcs-blue);
 }
 
-/* Main ancho completo para nosotros */
-main:has(.club-logo-section) {
-    max-width: 100%;
-    padding: 0;
-}
-
 /* ========================================
-   MR. LEATHER SPAIN
+   17. MR. LEATHER SPAIN
    ======================================== */
+
 .mister-section {
     padding: 60px 20px 80px;
     background: var(--lmcs-blue);
@@ -2616,8 +2156,9 @@ main:has(.club-logo-section) {
 }
 
 /* ========================================
-   ECMC
+   18. ECMC
    ======================================== */
+
 .ecmc-section {
     padding: 80px 20px;
     background: #ffffff;
@@ -2647,8 +2188,9 @@ main:has(.club-logo-section) {
 }
 
 /* ========================================
-   CLUBS HERMANADOS
+   19. CLUBS HERMANADOS
    ======================================== */
+
 .clubs-section {
     padding: 80px 20px;
     background: #ffffff;
@@ -2684,7 +2226,7 @@ main:has(.club-logo-section) {
 }
 
 .club-nombre a {
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
     font-size: 1.2rem;
     font-weight: 600;
     text-decoration: none;
@@ -2697,8 +2239,9 @@ main:has(.club-logo-section) {
 }
 
 /* ========================================
-   COLABORADORES
+   20. COLABORADORES
    ======================================== */
+
 .colaboradores-section {
     padding: 80px 20px;
     background: #ffffff;
@@ -2735,7 +2278,7 @@ main:has(.club-logo-section) {
 }
 
 .colaborador-nombre a {
-    color: #2C4A7C;
+    color: var(--lmcs-blue);
     font-size: 0.95rem;
     font-weight: 600;
     text-decoration: none;
@@ -2750,11 +2293,12 @@ main:has(.club-logo-section) {
 }
 
 /* ========================================
-   SPONSORS
+   21. SPONSORS
    ======================================== */
+
 .sponsors-section {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #2C4A7C 0%, #1a365d 100%);
+    background: var(--lmcs-blue) !important;
     text-align: center;
     width: 100%;
     display: block;
@@ -2809,16 +2353,169 @@ main:has(.club-logo-section) {
 }
 
 /* ========================================
-   18. RESPONSIVE - EVENTOS Y NOSOTROS
+   22. FOOTER
    ======================================== */
 
+footer {
+    background: var(--lmcs-blue) !important;
+    color: #ffffff;
+    padding: 10px 0;
+    margin-top: 0;
+    flex: 0 0 auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-links a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+    opacity: 0.85;
+    transform: translateY(-3px);
+}
+
+footer .social-links a i {
+    color: #ffffff !important;
+}
+
+footer .social-links a:hover i {
+    color: #ffffff !important;
+    opacity: 0.85;
+}
+
+footer img {
+    filter: brightness(0) invert(1);
+}
+
+.copyright-line {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.copyright-line p {
+    color: #ffffff;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* ========================================
+   23. RESPONSIVE
+   ======================================== */
+
+/* --- PANTALLAS EXTRA GRANDES (1600px+) --- */
+@media (min-width: 1600px) {
+    .contact-container {
+        max-width: 1600px;
+    }
+
+    .eventos-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* --- PANTALLAS MUY GRANDES (1700px+) --- */
+@media (min-width: 1700px) {
+    .events-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* --- PANTALLAS GRANDES (1400px+) --- */
+@media (min-width: 1400px) {
+    .contact-container {
+        max-width: 1400px;
+    }
+
+    .contact-card {
+        padding: 35px 30px;
+        min-width: 300px;
+        max-width: 400px;
+    }
+
+    .contact-card p {
+        font-size: 1.05rem;
+    }
+}
+
+/* --- MEDIANAS-GRANDES (max 1600px) --- */
 @media (max-width: 1600px) {
     .eventos-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
+/* --- MEDIANAS-GRANDES (max 1400px) --- */
+@media (max-width: 1400px) {
+    .carousel-container {
+        max-width: 95%;
+        padding: 30px 15px;
+    }
+
+    .controls-bottom {
+        gap: 10px;
+    }
+
+    .photo-counter {
+        font-size: 1.1rem;
+    }
+
+    .counter-current {
+        font-size: 1.7rem;
+    }
+
+    .btn-action {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+/* --- PANTALLAS MEDIANAS (max 1200px) --- */
 @media (max-width: 1200px) {
+    .events-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .controls-bottom {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .photo-counter {
+        justify-content: center;
+        order: 1;
+    }
+
+    .action-buttons {
+        order: 2;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn-action {
+        flex: 1;
+        justify-content: center;
+        min-width: 140px;
+    }
+
     .eventos-page {
         padding: 40px 30px;
     }
@@ -2828,7 +2525,60 @@ main:has(.club-logo-section) {
     }
 }
 
+/* --- TABLETS (max 1024px) --- */
+@media (max-width: 1024px) {
+    .contact-grid {
+        justify-content: center;
+    }
+
+    .contact-card {
+        flex: 1 1 280px;
+        max-width: 350px;
+    }
+}
+
+/* --- TABLETS Y MOVILES (max 992px) --- */
 @media (max-width: 992px) {
+    /* Galeria años */
+    .year-card {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .year-image {
+        width: 100%;
+        min-width: auto;
+        height: 400px;
+    }
+
+    .year-info {
+        padding: 30px;
+    }
+
+    .year-info h3 {
+        font-size: 2.5rem;
+    }
+
+    /* Eventos */
+    .event-item {
+        flex-direction: column;
+    }
+
+    .event-item-image {
+        width: 100%;
+        min-width: auto;
+        height: 350px;
+    }
+
+    .event-item-info {
+        padding: 30px;
+    }
+
+    .event-item-info h2 {
+        font-size: 2rem;
+    }
+
+    /* Nosotros */
     .junta-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
@@ -2857,7 +2607,347 @@ main:has(.club-logo-section) {
     }
 }
 
+/* --- MOVILES (max 768px) --- */
 @media (max-width: 768px) {
+    /* Header - Menu hamburguesa */
+    .nav-toggle {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .container {
+        position: relative;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    header .logo {
+        flex-direction: row;
+        text-align: left;
+        gap: 10px;
+    }
+
+    header .logo img {
+        height: 50px;
+    }
+
+    header .logo span {
+        font-size: 1.25rem;
+        white-space: normal;
+        line-height: 1.2;
+    }
+
+    /* Menu desplegable */
+    nav ul.nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        left: 20px;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        margin-top: 10px;
+        background: #ffffff;
+        border: 1px solid rgba(22, 76, 121, 0.18);
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        z-index: 999;
+    }
+
+    nav ul.nav-menu.open {
+        display: flex;
+    }
+
+    nav ul.nav-menu li a {
+        display: block;
+        padding: 12px 14px;
+    }
+
+    nav ul {
+        gap: 0;
+    }
+
+    /* Main */
+    main {
+        padding: 0 10px;
+    }
+
+    /* HOME */
+    .home-hero { padding: 50px 16px 36px; }
+    .home-section { padding: 46px 16px; }
+
+    .home-carousel {
+        grid-template-columns: 44px 1fr 44px;
+    }
+
+    .carousel-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .carousel-viewport {
+        min-height: 300px;
+    }
+
+    /* Contacto */
+    .contact-container h1 {
+        font-size: 2rem;
+    }
+
+    .contact-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-card {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .location-section {
+        padding: 30px 20px;
+    }
+
+    .location-section h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Galeria años */
+    .gallery-years-container h1 {
+        font-size: 2rem;
+    }
+
+    .year-image {
+        height: 300px;
+    }
+
+    .year-info {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .year-info h3 {
+        font-size: 2.2rem;
+    }
+
+    .year-info p {
+        font-size: 1rem;
+    }
+
+    .year-stats-info {
+        flex-direction: row;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .stat-item {
+        gap: 8px;
+    }
+
+    .stat-item i {
+        font-size: 1.2rem;
+    }
+
+    .stat-item span {
+        font-size: 1rem;
+    }
+
+    .btn-year {
+        align-self: center;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        display: inline-flex;
+        padding: 14px 30px;
+    }
+
+    /* Eventos del año */
+    .btn-back {
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .events-header h1 {
+        font-size: 2rem;
+    }
+
+    .event-item-image {
+        height: 280px;
+    }
+
+    .event-item-info {
+        padding: 25px;
+    }
+
+    .event-item-info h2 {
+        font-size: 1.7rem;
+    }
+
+    .event-description {
+        font-size: 1rem;
+    }
+
+    .meta-item {
+        font-size: 0.95rem;
+    }
+
+    .btn-view-photos {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .event-card {
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .event-image {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .event-image img {
+        min-height: 0;
+        height: 200px;
+    }
+
+    .event-info {
+        padding: 22px;
+    }
+
+    .event-info h3 {
+        font-size: 1.2rem;
+        min-height: 0;
+        margin-top: 36px;
+    }
+
+    .btn-event {
+        width: 100%;
+        align-self: stretch;
+    }
+
+    .featured-label {
+        top: 14px;
+        right: 16px;
+    }
+
+    /* Carousel evento */
+    .event-title h1 {
+        font-size: 1.8rem;
+    }
+
+    .event-title h2 {
+        font-size: 1.3rem;
+    }
+
+    .eventSwiper {
+        height: 50vh;
+        min-height: 400px;
+    }
+
+    .eventSwiper .swiper-button-next,
+    .eventSwiper .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+    }
+
+    .eventSwiper .swiper-button-next::after,
+    .eventSwiper .swiper-button-prev::after {
+        font-size: 16px;
+    }
+
+    .controls-bottom {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .photo-counter {
+        justify-content: center;
+        font-size: 1.1rem;
+    }
+
+    .counter-current {
+        font-size: 1.6rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-action {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+    }
+
+    /* Galeria general */
+    .gallery-container h1 {
+        font-size: 2rem;
+    }
+
+    .swiper {
+        height: 400px;
+    }
+
+    .slide-caption {
+        padding: 30px 20px 20px;
+    }
+
+    .slide-caption h3 {
+        font-size: 1.2rem;
+    }
+
+    .slide-caption p {
+        font-size: 0.9rem;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 16px;
+    }
+
+    /* Typeform */
+    .typeform-container {
+        padding: 10px;
+        margin: 20px 0;
+    }
+
+    .typeform-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .typeform-container p {
+        font-size: 1rem;
+    }
+
+    /* Instruccion formulario */
+    .form-instruction {
+        padding: 12px 15px;
+    }
+
+    .form-instruction p {
+        font-size: 0.95rem;
+    }
+
+    /* Eventos pagina */
     .eventos-page {
         padding: 30px 15px;
     }
@@ -2900,6 +2990,7 @@ main:has(.club-logo-section) {
         padding: 20px 20px;
     }
 
+    /* Nosotros */
     .section-title {
         font-size: 2rem;
     }
@@ -2960,13 +3051,31 @@ main:has(.club-logo-section) {
         width: 90px;
         height: 90px;
     }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .social-links {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-links a {
+        font-size: 1.3rem;
+    }
 }
+
+/* --- MOVILES PEQUEÑOS (max 480px) --- */
 @media (max-width: 480px) {
     .mister-grid {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .mister-item {
         width: 90%;
         max-width: 300px;
@@ -2990,201 +3099,4 @@ main:has(.club-logo-section) {
     .sponsor-item {
         width: 120px;
     }
-}
-
-
-
-/* ===== HISTORIA ===== */
-.historia-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.historia-content p {
-    margin-bottom: 1.2rem;
-    line-height: 1.7;
-}
-
-.historia-content ul {
-    margin: 2rem 0;
-    padding-left: 1.2rem;
-}
-
-.historia-content li {
-    margin-bottom: 0.6rem;
-}
-
-/* ========================================
-   HISTORIA - TEXTO SIEMPRE NEGRO
-   ======================================== */
-.historia-content,
-.historia-content p,
-.historia-content li {
-    color: #000000 !important;
-}
-
-
-/* ========================================
-   LMCS BRAND OVERRIDES (AZUL ÚNICO)
-   Objetivo: unificar todos los azules a #164C79
-   Sin degradados
-   ======================================== */
-
-:root {
-    --lmcs-blue: #164C79;
-    --lmcs-blue-10: rgba(22, 76, 121, 0.10);
-    --lmcs-blue-15: rgba(22, 76, 121, 0.15);
-    --lmcs-blue-35: rgba(22, 76, 121, 0.35);
-    --lmcs-blue-80: rgba(22, 76, 121, 0.80);
-    --lmcs-blue-95: rgba(22, 76, 121, 0.95);
-}
-
-/* Header + navegación */
-header { color: var(--lmcs-blue); }
-.logo span { color: var(--lmcs-blue); }
-.nav-toggle span { background: var(--lmcs-blue); }
-.nav-toggle:focus { outline-color: var(--lmcs-blue-35); }
-
-nav ul li a { color: var(--lmcs-blue); }
-nav ul li a:hover { background-color: var(--lmcs-blue-10); }
-nav ul li a.active { background-color: var(--lmcs-blue-15); }
-
-/* Títulos */
-h1, h2, h3, h4 {
-    color: var(--lmcs-blue);
-}
-
-/* Iconos */
-i,
-.stat-item i,
-.meta-item i,
-.event-date i,
-.event-photos i,
-.event-date-header i,
-.instagram-credit i {
-    color: var(--lmcs-blue);
-}
-
-/* Botones (SIN degradados) */
-.btn-year,
-.btn-view-photos,
-.btn-event,
-.btn-contact,
-.btn-action,
-.social-buttons a {
-    background: var(--lmcs-blue) !important;
-    color: #ffffff;
-}
-
-.btn-year:hover,
-.btn-view-photos:hover,
-.btn-event:hover,
-.btn-contact:hover,
-.btn-action:hover,
-.social-buttons a:hover {
-    background: var(--lmcs-blue) !important;
-    opacity: 0.9;
-}
-
-/* Botones volver */
-.btn-back,
-.btn-back-carousel {
-    color: var(--lmcs-blue);
-}
-
-.btn-back:hover,
-.btn-back-carousel:hover {
-    background: var(--lmcs-blue);
-    color: #ffffff;
-}
-
-/* Badges */
-.event-badge {
-    background: var(--lmcs-blue);
-}
-
-/* Carousel flechas */
-.eventSwiper .swiper-button-next,
-.eventSwiper .swiper-button-prev,
-.swiper-button-next,
-.swiper-button-prev {
-    background: var(--lmcs-blue);
-}
-
-/* Barra de progreso */
-.progress-bar {
-    background: var(--lmcs-blue);
-}
-
-/* Timeline */
-.timeline-wrapper::before {
-    background: var(--lmcs-blue);
-}
-
-.timeline-dot {
-    background: var(--lmcs-blue);
-}
-
-/* Footer SIN degradado */
-footer {
-    background: var(--lmcs-blue) !important;
-}
-
-/* Sponsors y secciones que usaban gradiente */
-.sponsors-section,
-.evento-card-header,
-.evento-card.special .evento-card-header {
-    background: var(--lmcs-blue) !important;
-}
-
-
-/* ========================================
-   FOOTER - LOGOS EN BLANCO
-   ======================================== */
-
-/* Iconos de redes (Font Awesome) */
-footer .social-links a i {
-    color: #ffffff !important;
-}
-
-/* Logos en imagen dentro del footer */
-footer img {
-    filter: brightness(0) invert(1);
-}
-
-/* Evitar que hover cambie a gris */
-footer .social-links a:hover i {
-    color: #ffffff !important;
-    opacity: 0.85;
-}
-/* ========================================
-   NOSOTROS: fondo limpio (sin gris)
-   ======================================== */
-
-.historia-section,
-.junta-section,
-.club-logo-section {
-    background: #ffffff;
-}
-
-body.nosotros-page {
-    background: #ffffff;
-}
-/* ========================================
-   FIX DEFINITIVO: FLECHAS E ICONOS BLANCOS
-   ======================================== */
-
-/* Flechas Swiper (icono real: pseudo-elemento ::after) */
-.eventSwiper .swiper-button-next::after,
-.eventSwiper .swiper-button-prev::after,
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    color: #ffffff !important;
-    font-weight: 900;
-}
-
-/* Botones de acción: Descargar / Pantalla completa */
-.btn-action i {
-    color: #ffffff !important;
 }
