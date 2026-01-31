@@ -80,6 +80,8 @@ header {
     align-items: center;
     gap: 15px;
     min-width: 0;
+    text-decoration: none;
+    color: inherit;
 }
 
 .logo img {
@@ -1742,7 +1744,7 @@ footer {
     }
 
     header .logo span {
-        font-size: clamp(12px, 4vw, 16px);
+        font-size: 1.25rem;
         white-space: normal;
         line-height: 1.2;
     }
