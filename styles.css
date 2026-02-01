@@ -3035,26 +3035,9 @@ footer img {
         grid-template-columns: 1fr;
     }
 
-    .evento-card-lower {
-        flex-direction: column;
-    }
-
-    .evento-card.has-cartel .evento-card-image {
-        width: 100%;
-        max-height: 250px;
-    }
-
     .evento-card-header {
         padding: 15px;
         min-height: auto;
-    }
-
-    .evento-card-header h3 {
-        font-size: 1.1rem;
-    }
-
-    .evento-card-body {
-        padding: 15px;
     }
 
     .eventos-section-title {
