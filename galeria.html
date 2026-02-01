@@ -57,7 +57,7 @@
     <main>
         <div class="gallery-years-container">
             <h1>Galería</h1>
-            <p class="gallery-intro">Revive los mejores momentos del Leathermen Club of Spain</p>
+            <p class="gallery-intro">Revive los mejores momentos de nuestros eventos</p>
 
             <!-- GRID DE AÑOS -->
             <div class="years-grid">
@@ -73,11 +73,11 @@
                         <div class="year-stats-info">
                             <div class="stat-item">
                                 <i class="fas fa-calendar-alt"></i>
-                                <span>10 Eventos</span>
+                                <span id="stats-2026-events"></span>
                             </div>
                             <div class="stat-item">
                                 <i class="fas fa-images"></i>
-                                <span>350 Fotos</span>
+                                <span id="stats-2026-photos"></span>
                             </div>
                         </div>
                         <a href="galeria-2026.html" class="btn-year">
@@ -97,11 +97,11 @@
                         <div class="year-stats-info">
                             <div class="stat-item">
                                 <i class="fas fa-calendar-alt"></i>
-                                <span>12 Eventos</span>
+                                <span id="stats-2025-events"></span>
                             </div>
                             <div class="stat-item">
                                 <i class="fas fa-images"></i>
-                                <span>400 Fotos</span>
+                                <span id="stats-2025-photos"></span>
                             </div>
                         </div>
                         <a href="galeria-2025.html" class="btn-year">
@@ -135,7 +135,7 @@
         </div>
         
         <div class="copyright-line">
-            <p>&copy; 2025 Leathermen Club of Spain. Todos los derechos reservados.</p>
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Leathermen Club of Spain. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -162,6 +162,43 @@
                     menu.classList.remove('open');
                     btn.setAttribute('aria-expanded', 'false');
                 }
+            });
+        })();
+    </script>
+    <script>
+        (function () {
+            // Páginas de cada año — el script las lee automáticamente
+            var YEAR_PAGES = [
+                { year: 2026, page: 'galeria-2026.html' },
+                { year: 2025, page: 'galeria-2025.html' }
+            ];
+
+            YEAR_PAGES.forEach(function (entry) {
+                fetch(entry.page)
+                    .then(function (res) { return res.text(); })
+                    .then(function (html) {
+                        // Contar eventos: cada <div class="event-card"> es un evento
+                        var eventMatches = html.match(/class="event-card/g);
+                        var numEvents = eventMatches ? eventMatches.length : 0;
+
+                        // Sumar fotos: buscar el objeto EVENT_PHOTOS y sumar los valores de photos
+                        var totalPhotos = 0;
+                        var photoMatches = html.match(/photos:\s*(\d+)/g);
+                        if (photoMatches) {
+                            photoMatches.forEach(function (m) {
+                                var num = parseInt(m.replace(/photos:\s*/, ''), 10);
+                                if (!isNaN(num)) totalPhotos += num;
+                            });
+                        }
+
+                        var eventsEl = document.getElementById('stats-' + entry.year + '-events');
+                        var photosEl = document.getElementById('stats-' + entry.year + '-photos');
+
+                        if (eventsEl) eventsEl.textContent = numEvents + ' Eventos';
+                        if (photosEl) photosEl.textContent = totalPhotos > 0
+                            ? totalPhotos + ' Fotos'
+                            : 'Próximamente';
+                    });
             });
         })();
     </script>

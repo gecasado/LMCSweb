@@ -2330,11 +2330,16 @@ body.nosotros-page {
 
 .colaboradores-section {
     padding: 80px 20px;
-    background: #ffffff;
+    background: var(--lmcs-blue) !important;
     text-align: center;
     width: 100%;
     display: block;
     clear: both;
+}
+
+.colaboradores-section .section-title {
+    color: #fff;
+    margin-bottom: 50px;
 }
 
 .colaboradores-grid {
@@ -2364,7 +2369,7 @@ body.nosotros-page {
 }
 
 .colaborador-nombre a {
-    color: var(--lmcs-blue);
+    color: #fff;
     font-size: 0.95rem;
     font-weight: 600;
     text-decoration: none;
@@ -2374,7 +2379,7 @@ body.nosotros-page {
 }
 
 .colaborador-nombre a:hover {
-    color: #E60139;
+    color: #FFD700;
     text-decoration: underline;
 }
 
@@ -2384,16 +2389,11 @@ body.nosotros-page {
 
 .sponsors-section {
     padding: 80px 20px;
-    background: var(--lmcs-blue) !important;
+    background: #ffffff;
     text-align: center;
     width: 100%;
     display: block;
     clear: both;
-}
-
-.sponsors-section .section-title {
-    color: #fff;
-    margin-bottom: 50px;
 }
 
 .sponsors-grid {
@@ -2426,7 +2426,7 @@ body.nosotros-page {
 }
 
 .sponsor-nombre a {
-    color: #fff;
+    color: var(--lmcs-blue);
     font-size: 0.95rem;
     font-weight: 600;
     text-decoration: none;
@@ -2434,7 +2434,7 @@ body.nosotros-page {
 }
 
 .sponsor-nombre a:hover {
-    color: #FFD700;
+    color: #E60139;
     text-decoration: underline;
 }
 
