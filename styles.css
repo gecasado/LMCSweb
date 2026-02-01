@@ -385,6 +385,36 @@ main:has(.eventos-page) {
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     padding: 26px 22px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.next-event-cartel {
+    display: none;
+    width: 280px;
+    min-width: 280px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.next-event-body {
+    flex: 1;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .next-event-card {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .next-event-cartel {
+        width: 100%;
+        min-width: unset;
+        max-width: 320px;
+        margin: 0 auto;
+    }
 }
 
 .next-event-badge {

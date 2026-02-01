@@ -77,13 +77,16 @@
             <h2 class="home-section-title">Próximos eventos</h2>
 
             <div id="next-event-card" class="next-event-card" role="status" aria-live="polite">
-                <div class="next-event-badge" id="next-event-badge">Cargando…</div>
-                <h3 class="next-event-title" id="next-event-title">Calculando el próximo evento</h3>
-                <p class="next-event-meta" id="next-event-meta">Un segundo…</p>
-                <p class="next-event-countdown" id="next-event-countdown"></p>
+                <img class="next-event-cartel" id="next-event-cartel" src="" alt="" loading="lazy">
+                <div class="next-event-body">
+                    <div class="next-event-badge" id="next-event-badge">Cargando…</div>
+                    <h3 class="next-event-title" id="next-event-title">Calculando el próximo evento</h3>
+                    <p class="next-event-meta" id="next-event-meta">Un segundo…</p>
+                    <p class="next-event-countdown" id="next-event-countdown"></p>
 
-                <div class="next-event-actions">
-                    <a class="btn-outline" href="eventos.html">Ver eventos</a>
+                    <div class="next-event-actions">
+                        <a class="btn-outline" href="eventos.html">Ver eventos</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -183,7 +186,8 @@
                 title: "Madrid Leather Social",
                 date: "2026-02-07T18:00:00",
                 location: "Madrid",
-                url: "eventos.html#mls-febrero"
+                url: "eventos.html#mls-febrero",
+                cartel: "images/galeria/2026/febrero2026.png"
             }
         ];
 
@@ -228,6 +232,7 @@
             const title = document.getElementById("next-event-title");
             const meta = document.getElementById("next-event-meta");
             const countdown = document.getElementById("next-event-countdown");
+            const cartel = document.getElementById("next-event-cartel");
 
             if (!badge || !title || !meta || !countdown) return;
 
@@ -236,7 +241,18 @@
                 title.textContent = "Ahora mismo no hay un evento programado";
                 meta.textContent = "Vuelve pronto o mira el calendario completo 🙂";
                 countdown.textContent = "";
+                if (cartel) cartel.style.display = "none";
                 return;
+            }
+
+            if (cartel) {
+                if (next.cartel) {
+                    cartel.src = next.cartel;
+                    cartel.alt = next.title;
+                    cartel.style.display = "block";
+                } else {
+                    cartel.style.display = "none";
+                }
             }
 
             badge.textContent = "Próximo";
