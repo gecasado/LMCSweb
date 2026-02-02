@@ -23,8 +23,9 @@
    19. CLUBS HERMANADOS
    20. COLABORADORES
    21. SPONSORS
-   22. FOOTER
-   23. RESPONSIVE
+   22. ESTATUTOS (estatutos.html)
+   23. FOOTER
+   24. RESPONSIVE
    ======================================== */
 
 /* ========================================
@@ -2439,7 +2440,64 @@ body.nosotros-page {
 }
 
 /* ========================================
-   22. FOOTER
+   22. ESTATUTOS (estatutos.html)
+   ======================================== */
+
+.estatutos-section {
+    padding: 60px 20px;
+    background: #ffffff;
+}
+
+.estatutos-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #000000;
+    text-align: left;
+}
+
+.estatutos-capitulo {
+    margin-bottom: 3rem;
+}
+
+.estatutos-capitulo h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--lmcs-blue);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--lmcs-blue-15);
+}
+
+.estatutos-articulo {
+    margin-bottom: 1.5rem;
+}
+
+.estatutos-articulo h4 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--lmcs-blue);
+    margin-bottom: 0.5rem;
+}
+
+.estatutos-articulo p {
+    margin-bottom: 0.8rem;
+    line-height: 1.7;
+}
+
+.estatutos-articulo ul,
+.estatutos-articulo ol {
+    margin: 0.8rem 0;
+    padding-left: 1.2rem;
+}
+
+.estatutos-articulo li {
+    margin-bottom: 0.4rem;
+}
+
+/* ========================================
+   23. FOOTER
    ======================================== */
 
 footer {
@@ -2504,7 +2562,7 @@ footer img {
 }
 
 /* ========================================
-   23. RESPONSIVE
+   24. RESPONSIVE
    ======================================== */
 
 /* --- PANTALLAS EXTRA GRANDES (1600px+) --- */
