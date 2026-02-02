@@ -2670,22 +2670,21 @@ footer img {
 @media (max-width: 992px) {
     /* Galeria años */
     .year-card {
-        flex-direction: column;
-        min-height: auto;
+        flex-direction: row;
+        min-height: 220px;
     }
 
     .year-image {
-        width: 100%;
-        min-width: auto;
-        height: 400px;
+        width: 35%;
+        min-width: 0;
     }
 
     .year-info {
-        padding: 30px;
+        padding: 25px;
     }
 
     .year-info h3 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     /* Eventos */
@@ -2851,31 +2850,42 @@ footer img {
         font-size: 2rem;
     }
 
+    .year-card {
+        min-height: 180px;
+    }
+
     .year-image {
-        height: 300px;
+        width: 35%;
+        min-width: 0;
     }
 
     .year-info {
-        padding: 20px;
-        text-align: center;
+        padding: 15px;
+        text-align: left;
     }
 
     .year-info h3 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
 
     .year-info p {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        margin-bottom: 12px;
     }
 
     .year-stats-info {
-        flex-direction: row;
-        justify-content: center;
-        gap: 25px;
+        flex-direction: column;
+        gap: 6px;
     }
 
     .stat-item {
-        gap: 8px;
+        gap: 6px;
+        font-size: 0.85rem;
+    }
+
+    .btn-year {
+        font-size: 0.9rem;
+        padding: 10px 18px;
     }
 
     .stat-item i {
@@ -2936,38 +2946,50 @@ footer img {
     }
 
     .event-card {
-        flex-direction: column;
-        min-height: 0;
+        flex-direction: row;
+        min-height: 160px;
     }
 
     .event-image {
-        width: 100%;
+        width: 35%;
         min-width: 0;
     }
 
     .event-image img {
         min-height: 0;
-        height: 200px;
+        height: 100%;
     }
 
     .event-info {
-        padding: 22px;
+        padding: 15px;
     }
 
     .event-info h3 {
-        font-size: 1.2rem;
+        font-size: 1rem;
         min-height: 0;
-        margin-top: 36px;
+        margin-top: 0;
+    }
+
+    .event-date {
+        font-size: 0.85rem;
+    }
+
+    .event-photos {
+        font-size: 0.85rem;
     }
 
     .btn-event {
-        width: 100%;
-        align-self: stretch;
+        font-size: 0.85rem;
+        padding: 8px 14px;
+        align-self: flex-start;
     }
 
     .featured-label {
-        top: 14px;
-        right: 16px;
+        top: 10px;
+        right: 10px;
+        width: 28px;
+        height: 28px;
+        font-size: 0.7rem;
     }
 
     /* Carousel evento */
