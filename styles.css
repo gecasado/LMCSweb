@@ -1057,7 +1057,7 @@ main:has(.eventos-page) {
 
 .events-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
     align-items: stretch;
 }
@@ -2627,10 +2627,6 @@ footer img {
 
 /* --- PANTALLAS MEDIANAS (max 1200px) --- */
 @media (max-width: 1200px) {
-    .events-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
     .controls-bottom {
         flex-direction: column;
         align-items: stretch;
