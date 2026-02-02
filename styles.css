@@ -120,11 +120,12 @@ header {
 }
 
 .logo img {
-    height: clamp(44px, 6vw, 80px);
+    height: clamp(54px, 8vw, 100px);
     width: auto;
     display: block;
     padding: 6px;
     border-radius: 10px;
+    margin: -10px 0;
 }
 
 .logo span {
