@@ -5,22 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Leathermen Club of Spain">
-    <title>Eventos 2026 - Galería LMCS</title>
-    <meta name="description" content="Eventos y galería de fotos del Leathermen Club of Spain 2026.">
-    <link rel="icon" type="image/png" href="images/iconLMCS.png">
-    <!-- Google Fonts: Inter -->
+
+    <title>Leathermen Club of Spain | Comunidad Leather en España</title>
+    <meta name="description" content="Únete al club oficial de Leathermen en España. Eventos, comunidad, cultura leather y fetichismo.">
+    <link rel="canonical" href="https://lmcspain.com/galeria-2026">
+    <link rel="icon" type="image/png" href="images/nosotros/iconlmcs.webp">
+
+    <meta property="og:title" content="Galería 2026 - LMCS">
+    <meta property="og:description" content="Únete al club oficial de Leathermen en España. Eventos, comunidad y cultura leather.">
+    <meta property="og:url" content="https://lmcspain.com/galeria-2026">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lmcspain.com/images/nosotros/logolmcs_black.webp">
+    <meta property="og:locale" content="es_ES">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Leathermen Club of Spain">
+    <meta name="twitter:description" content="Comunidad dedicada a la cultura leatherman en España.">
+    <meta name="twitter:image" content="https://lmcspain.com/images/nosotros/logolmcs_black.webp">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="js/main.js" defer></script>
+    <script src="js/galeria-2026.js" defer></script>
 </head>
 <body>
     <!-- HEADER -->
     <header>
         <div class="container">
-            <a href="index.html" class="logo">
-                <img src="images/logoLMCS_black.png" alt="Leathermen Club of Spain Logo">
+            <a href="/" class="logo">
+                <img src="images/nosotros/logolmcs_black.webp" alt="Leathermen Club of Spain Logo">
                 <span>LEATHERMEN CLUB OF SPAIN</span>
             </a>
             <nav>
@@ -30,13 +48,19 @@
                     <span></span>
                 </button>
                 <ul id="main-menu" class="nav-menu">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="eventos.html">Eventos</a></li>
-                    <li><a href="galeria.html" class="active">Galería</a></li>
-                    <li><a href="hazte-socio.html">Hazte Socio</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="nosotros">Nosotros</a></li>
+                    <li><a href="eventos">Eventos</a></li>
+                    <li><a href="galeria" class="active">Galería</a></li>
+                    <li><a href="hazte-socio">Hazte Socio</a></li>
+                    <li><a href="donaciones">Donaciones</a></li>
+                    <li><a href="contacto">Contacto</a></li>
                 </ul>
+            <div class="lang-switcher">
+                    <a href="#" class="lang-active">ES</a>
+                    <span class="lang-divider">|</span>
+                    <a href="/en/galeria-2026.html">EN</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -46,7 +70,7 @@
         <div class="events-year-container">
             <!-- Header con botón volver -->
             <div class="events-header">
-                <a href="galeria.html" class="btn-back">
+                <a href="galeria" class="btn-back">
                     <i class="fas fa-arrow-left"></i> Volver a Galería
                 </a>
                 <h1>Eventos 2026</h1>
@@ -59,7 +83,7 @@
                 <!-- Evento 1: Roscón de Reyes - Enero -->
                 <div class="event-card">
                     <div class="event-image">
-                        <img src="images/galeria/2026/enero2026.jpeg" alt="Roscón de Reyes">
+                        <img src="images/galeria/2026/enero2026.webp" alt="Roscón de Reyes">
                     </div>
                     <div class="event-info">
                         <h3>Roscón de Reyes</h3>
@@ -74,14 +98,14 @@
                 <!-- Evento 2: Madrid Leather Social - Febrero -->
                 <div class="event-card">
                     <div class="event-image">
-                        <img src="images/galeria/2026/febrero2026.png" alt="Madrid Leather Social Febrero">
+                        <img src="images/galeria/2026/febrero2026.webp" alt="Madrid Leather Social Febrero">
                     </div>
                     <div class="event-info">
                         <h3>Madrid Leather Social</h3>
                         <p class="event-date"><i class="fas fa-calendar"></i> 7 Febrero 2026</p>
                         <p class="event-photos" data-event="social-febrero-2026"></p>
-                        <a href="#" class="btn-event btn-disabled" data-event-link="social-febrero-2026">
-                            Próximamente
+                        <a href="galeria-2026-social-febrero" class="btn-event" data-event-link="social-febrero-2026">
+                            Ver fotos <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
@@ -89,7 +113,7 @@
                 <!-- Evento 3: Madrid Leather Social - 2nd Hand Market - Marzo -->
                 <div class="event-card">
                     <div class="event-image">
-                        <img src="images/galeria/2026/marzo2026.png" alt="Madrid Leather Social 2nd Hand Market">
+                        <img src="images/galeria/2026/marzo2026.webp" alt="Madrid Leather Social 2nd Hand Market">
                     </div>
                     <div class="event-info">
                         <h3>Madrid Leather Social - 2nd Hand Market</h3>
@@ -104,7 +128,7 @@
                 <!-- Evento 4: Iberian Leather Meet-up - Marzo -->
                 <div class="event-card event-featured">
                     <div class="event-image">
-                        <img src="images/galeria/2026/iberian2026.png" alt="Iberian Leather Meet-up">
+                        <img src="images/galeria/2026/iberian2026.webp" alt="Iberian Leather Meet-up">
                     </div>
                     <div class="event-info">
                         <div class="featured-label">
@@ -122,7 +146,7 @@
                 <!-- Evento 5: Madrid Leather Social - BLUF Social - Abril -->
                 <div class="event-card">
                     <div class="event-image">
-                        <img src="images/logoLMCS_black.png" alt="BLUF Social Abril">
+                        <img src="images/nosotros/logolmcs_black.webp" alt="BLUF Social Abril">
                     </div>
                     <div class="event-info">
                         <h3>Madrid Leather Social - BLUF Social</h3>
@@ -137,7 +161,7 @@
                 <!-- Evento 6: 7º Aniversario LMCS - Mayo -->
                 <div class="event-card event-featured">
                     <div class="event-image">
-                        <img src="images/logoLMCS_black.png" alt="7º Aniversario LMCS">
+                        <img src="images/nosotros/logolmcs_black.webp" alt="7º Aniversario LMCS">
                     </div>
                     <div class="event-info">
                         <div class="featured-label">
@@ -155,7 +179,7 @@
                 <!-- Evento 7: Madrid Leather Social - Junio -->
                 <div class="event-card">
                     <div class="event-image">
-                        <img src="images/logoLMCS_black.png" alt="Madrid Leather Social Junio">
+                        <img src="images/nosotros/logolmcs_black.webp" alt="Madrid Leather Social Junio">
                     </div>
                     <div class="event-info">
                         <h3>Madrid Leather Social</h3>
@@ -170,7 +194,7 @@
                 <!-- Evento 8: Madrid Pride - Julio -->
                 <div class="event-card event-featured">
                     <div class="event-image">
-                        <img src="images/logoLMCS_black.png" alt="Madrid Pride 2026">
+                        <img src="images/nosotros/logolmcs_black.webp" alt="Madrid Pride 2026">
                     </div>
                     <div class="event-info">
                         <div class="featured-label">
@@ -188,7 +212,7 @@
                 <!-- Evento 9: Madrid Leather Social - Septiembre -->
                 <div class="event-card">
                     <div class="event-image">
-                        <img src="images/logoLMCS_black.png" alt="Madrid Leather Social Septiembre">
+                        <img src="images/nosotros/logolmcs_black.webp" alt="Madrid Leather Social Septiembre">
                     </div>
                     <div class="event-info">
                         <h3>Madrid Leather Social</h3>
@@ -203,7 +227,7 @@
                 <!-- Evento 10: Madrid Leather Social - Octubre -->
                 <div class="event-card">
                     <div class="event-image">
-                        <img src="images/logoLMCS_black.png" alt="Madrid Leather Social Octubre">
+                        <img src="images/nosotros/logolmcs_black.webp" alt="Madrid Leather Social Octubre">
                     </div>
                     <div class="event-info">
                         <h3>Madrid Leather Social</h3>
@@ -218,7 +242,7 @@
                 <!-- Evento 11: Madrid Leather Weekend - Mr. Leather Spain 2027 -->
                 <div class="event-card event-featured">
                     <div class="event-image">
-                        <img src="images/logoLMCS_black.png" alt="Madrid Leather Weekend">
+                        <img src="images/nosotros/logolmcs_black.webp" alt="Madrid Leather Weekend">
                     </div>
                     <div class="event-info">
                         <div class="featured-label">
@@ -236,7 +260,7 @@
                 <!-- Evento 12: Madrid Leather Social - BLUF Social - Noviembre -->
                 <div class="event-card">
                     <div class="event-image">
-                        <img src="images/logoLMCS_black.png" alt="BLUF Social Noviembre">
+                        <img src="images/nosotros/logolmcs_black.webp" alt="BLUF Social Noviembre">
                     </div>
                     <div class="event-info">
                         <h3>Madrid Leather Social - BLUF Social</h3>
@@ -257,7 +281,7 @@
     <footer>
         <div class="footer-content">
             <div class="social-links">
-                <a href="mailto:leathermenclubspain@gmail.com" aria-label="Email">
+                <a href="mailto:lmcs@lmcspain.com" aria-label="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
                 <a href="https://www.instagram.com/leathermen_club_of_spain_lmcs" target="_blank" aria-label="Instagram">
@@ -272,94 +296,16 @@
             </div>
         </div>
 
+        <div class="footer-legal" style="margin-top: 20px; font-size: 0.8rem; opacity: 0.7;">
+            <a href="aviso-legal" style="color: white; margin: 0 10px;">Aviso Legal</a> |
+            <a href="privacidad" style="color: white; margin: 0 10px;">Politica de Privacidad</a> |
+            <a href="estatutos" style="color: white; margin: 0 10px;">Estatutos</a>
+        </div>
+
         <div class="copyright-line">
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> Leathermen Club of Spain. Todos los derechos reservados.</p>
+            <p>&copy; <span class="current-year"></span> Leathermen Club of Spain. Todos los derechos reservados.</p>
         </div>
     </footer>
+
 </body>
-<script>
-    (function () {
-        const btn = document.querySelector('.nav-toggle');
-        const menu = document.querySelector('nav ul.nav-menu');
-        if (!btn || !menu) return;
-
-        btn.addEventListener('click', () => {
-            const isOpen = menu.classList.toggle('open');
-            btn.setAttribute('aria-expanded', String(isOpen));
-        });
-
-        menu.querySelectorAll('a').forEach((a) => {
-            a.addEventListener('click', () => {
-                menu.classList.remove('open');
-                btn.setAttribute('aria-expanded', 'false');
-            });
-        });
-
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                menu.classList.remove('open');
-                btn.setAttribute('aria-expanded', 'false');
-            }
-        });
-    })();
-</script>
-<script>
-    (function () {
-        const EVENT_PHOTOS = {
-            "roscon-enero-2026": { photos: 0, href: null },
-            "social-febrero-2026": { photos: 0, href: null },
-            "market-marzo-2026": { photos: 0, href: null },
-            "iberian-marzo-2026": { photos: 0, href: null },
-            "bluf-abril-2026": { photos: 0, href: null },
-            "aniversario-mayo-2026": { photos: 0, href: null },
-            "social-junio-2026": { photos: 0, href: null },
-            "pride-julio-2026": { photos: 0, href: null },
-            "social-septiembre-2026": { photos: 0, href: null },
-            "social-octubre-2026": { photos: 0, href: null },
-            "mlw-2026": { photos: 0, href: null },
-            "bluf-noviembre-2026": { photos: 0, href: null }
-        };
-
-        // Calcular total de fotos del año
-        const totalPhotos = Object.values(EVENT_PHOTOS)
-            .reduce((sum, event) => sum + (event.photos || 0), 0);
-
-        const totalPhotosEl = document.getElementById('events-total-photos');
-        if (totalPhotosEl) {
-            totalPhotosEl.textContent =
-                totalPhotos > 0
-                    ? `${totalPhotos} fotos increíbles que vivimos juntos`
-                    : 'Próximamente nuevas fotos';
-        }
-
-        // Pintar contador de fotos / Próximamente
-        document.querySelectorAll('.event-photos[data-event]').forEach((el) => {
-            const key = el.getAttribute('data-event');
-            const cfg = EVENT_PHOTOS[key];
-
-            if (!cfg || !cfg.photos) {
-                el.innerHTML = '<i class="fas fa-images"></i> Próximamente';
-                return;
-            }
-            el.innerHTML = '<i class="fas fa-images"></i> ' + cfg.photos + ' fotos';
-        });
-
-        // Activar / desactivar botones según haya fotos
-        document.querySelectorAll('.btn-event[data-event-link]').forEach((btn) => {
-            const key = btn.getAttribute('data-event-link');
-            const cfg = EVENT_PHOTOS[key];
-
-            if (!cfg || !cfg.photos || !cfg.href) {
-                btn.classList.add('btn-disabled');
-                btn.setAttribute('href', '#');
-                btn.textContent = 'Próximamente';
-                return;
-            }
-
-            btn.classList.remove('btn-disabled');
-            btn.setAttribute('href', cfg.href);
-            btn.innerHTML = 'Ver fotos <i class="fas fa-arrow-right"></i>';
-        });
-    })();
-</script>
 </html>

@@ -2044,6 +2044,46 @@ main:has(.eventos-page) {
     color: var(--lmcs-blue);
 }
 
+.btn-ver-fotos {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 10px 20px;
+    background: var(--lmcs-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-ver-fotos:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.btn-info-evento {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 10px 20px;
+    background: #E60139;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-info-evento:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
 /* ========================================
    16. NOSOTROS (nosotros.html)
    ======================================== */
@@ -2498,6 +2538,53 @@ body.nosotros-page {
 }
 
 /* ========================================
+   SELECTOR DE IDIOMA ES/EN
+   ======================================== */
+
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 18px;
+    flex-shrink: 0;
+}
+
+.lang-switcher a {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--lmcs-blue);
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1.5px solid transparent;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+    letter-spacing: 0.04em;
+}
+
+.lang-switcher a:hover {
+    background: var(--lmcs-blue-10, rgba(22,76,121,0.08));
+    border-color: var(--lmcs-blue);
+}
+
+.lang-switcher a.lang-active {
+    background: var(--lmcs-blue);
+    color: #fff;
+    border-color: var(--lmcs-blue);
+}
+
+.lang-divider {
+    color: rgba(22,76,121,0.3);
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .lang-switcher {
+        margin-left: 10px;
+    }
+}
+
+/* ========================================
    23. FOOTER
    ======================================== */
 
@@ -2549,6 +2636,10 @@ footer .social-links a:hover i {
 
 footer img {
     filter: brightness(0) invert(1);
+}
+
+.footer-legal {
+    text-align: center;
 }
 
 .copyright-line {

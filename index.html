@@ -5,34 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Leathermen Club of Spain">
-    <title>Leathermen Club of Spain</title>
-    <meta name="description" content="Bienvenido al club Leathermen de España, una comunidad dedicada a la cultura leatherman y sus entusiastas.">
-    <meta name="keywords" content="Leathermen, Club, España, Comunidad, Cultura Leatherman, cuero, fetichismo, eventos, reuniones, LMCS">
-    <link rel="icon" type="image/png" href="images/iconLMCS.png">
-    <meta property="og:title" content="Leathermen Club of Spain">
-    <meta property="og:description" content="Bienvenido al club Leathermen de España, una comunidad dedicada a la cultura leatherman y sus entusiastas.">
-    <meta property="og:image" content="https://XXXX/images/og-image.png">
-    <meta property="og:url" content="https://XXXX/index.html">
+
+    <title>Leathermen Club of Spain | Comunidad Leather en España</title>
+    <meta name="description" content="Únete al club oficial de Leathermen en España. Eventos, comunidad, cultura leather y fetichismo.">
+    <link rel="canonical" href="https://lmcspain.com/">
+    <link rel="icon" type="image/png" href="images/nosotros/iconlmcs.webp">
+
+    <meta property="og:title" content="Inicio - LMCS">
+    <meta property="og:description" content="Únete al club oficial de Leathermen en España. Eventos, comunidad y cultura leather.">
+    <meta property="og:url" content="https://lmcspain.com/">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lmcspain.com/images/nosotros/logolmcs_black.webp">
+    <meta property="og:locale" content="es_ES">
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Leathermen Club of Spain">
-    <meta name="twitter:description" content="Bienvenido al club Leathermen de España, una comunidad dedicada a la cultura leatherman y sus entusiastas.">
-    <meta name="twitter:image" content="https://XXXX/images/og-image.png">
-    <meta name="theme-color" content="#2C4A7C">
-    <meta name="format-detection" content="telephone=no">
-    <!-- Google Fonts: Inter -->
+    <meta name="twitter:description" content="Comunidad dedicada a la cultura leatherman en España.">
+    <meta name="twitter:image" content="https://lmcspain.com/images/nosotros/logolmcs_black.webp">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": { "background": "#000" },
+        "button": { "background": "#f1d600" }
+      },
+      "content": {
+        "message": "Este sitio web utiliza cookies para garantizar que obtengas la mejor experiencia.",
+        "dismiss": "Aceptar",
+        "link": "Leer mas",
+        "href": "/privacidad"
+      }
+    })});
+    </script>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/home.js" defer></script>
 </head>
 <body>
     <!-- HEADER -->
     <header>
         <div class="container">
-            <a href="index.html" class="logo">
-                <img loading="lazy" src="images/logoLMCS_black.png" alt="Leathermen Club of Spain Logo">
+            <a href="/" class="logo">
+                <img loading="lazy" src="images/nosotros/logolmcs_black.webp" alt="Leathermen Club of Spain Logo">
                 <span>LEATHERMEN CLUB OF SPAIN</span>
             </a>
             <nav>
@@ -42,13 +66,19 @@
                     <span></span>
                 </button>
                 <ul id="main-menu" class="nav-menu">
-                    <li><a href="index.html" class="active">Inicio</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="eventos.html">Eventos</a></li>
-                    <li><a href="galeria.html">Galería</a></li>
-                    <li><a href="hazte-socio.html">Hazte Socio</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="/" class="active">Inicio</a></li>
+                    <li><a href="nosotros">Nosotros</a></li>
+                    <li><a href="eventos">Eventos</a></li>
+                    <li><a href="galeria">Galería</a></li>
+                    <li><a href="hazte-socio">Hazte Socio</a></li>
+                    <li><a href="donaciones">Donaciones</a></li>
+                    <li><a href="contacto">Contacto</a></li>
                 </ul>
+            <div class="lang-switcher">
+                    <a href="#" class="lang-active">ES</a>
+                    <span class="lang-divider">|</span>
+                    <a href="/en/index.html">EN</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -63,13 +93,13 @@
                     Donde la pasión por el cuero nos une por todo el mundo. Descubre nuestra comunidad única y los eventos que organizamos.
                 </h2>
 
-                <a class="btn-primary" href="hazte-socio.html">Hazte socio</a>
+                <a class="btn-primary" href="hazte-socio">Hazte socio</a>
             </div>
         </section>
 
         <!-- SEPARADOR -->
         <section class="home-separator" aria-hidden="true">
-            <img loading="lazy" src="images/chaquetas.png" alt="">
+            <img loading="lazy" src="images/bandera.webp" alt="">
         </section>
 
         <!-- PRÓXIMO EVENTO (AUTO con JS) -->
@@ -85,7 +115,7 @@
                     <p class="next-event-countdown" id="next-event-countdown"></p>
 
                     <div class="next-event-actions">
-                        <a class="btn-outline" href="eventos.html">Ver eventos</a>
+                        <a class="btn-outline" href="eventos">Ver eventos</a>
                     </div>
                 </div>
             </div>
@@ -99,7 +129,7 @@
                 Conoce el origen del LMCS, cómo crece nuestra comunidad y qué nos mueve. Cuero, cultura y unión.
             </p>
 
-            <a class="btn-primary" href="nosotros.html">Saber más</a>
+            <a class="btn-primary" href="nosotros">Saber más</a>
         </section>
 
         <!-- GALERÍA (CAROUSEL 4 FOTOS) -->
@@ -121,7 +151,7 @@
             </div>
 
             <p class="carousel-caption" id="carouselCaption">Último evento</p>
-            <a class="btn-outline" href="galeria-2025-mlw-gala-dinner.html">Ver toda la galería</a>
+            <a class="btn-outline" href="galeria-2026-social-febrero">Ver toda la galería</a>
         </section>
     </main>
 
@@ -129,7 +159,7 @@
     <footer>
         <div class="footer-content">
             <div class="social-links">
-                <a href="mailto:leathermenclubspain@gmail.com" aria-label="Email">
+                <a href="mailto:lmcs@lmcspain.com" aria-label="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
                 <a href="https://www.instagram.com/leathermen_club_of_spain_lmcs" target="_blank" aria-label="Instagram">
@@ -143,233 +173,18 @@
                 </a>
             </div>
         </div>
-        
+
+        <div class="footer-legal" style="margin-top: 20px; font-size: 0.8rem; opacity: 0.7;">
+            <a href="aviso-legal" style="color: white; margin: 0 10px;">Aviso Legal</a> |
+            <a href="privacidad" style="color: white; margin: 0 10px;">Politica de Privacidad</a> |
+            <a href="estatutos" style="color: white; margin: 0 10px;">Estatutos</a>
+        </div>
+
         <div class="copyright-line">
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> Leathermen Club of Spain. Todos los derechos reservados.</p>
+            <p>&copy; <span class="current-year"></span> Leathermen Club of Spain. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script>
-        (function () {
-            const btn = document.querySelector('.nav-toggle');
-            const menu = document.querySelector('nav ul.nav-menu');
-            if (!btn || !menu) return;
-
-            btn.addEventListener('click', () => {
-                const isOpen = menu.classList.toggle('open');
-                btn.setAttribute('aria-expanded', String(isOpen));
-            });
-
-            menu.querySelectorAll('a').forEach((a) => {
-                a.addEventListener('click', () => {
-                    menu.classList.remove('open');
-                    btn.setAttribute('aria-expanded', 'false');
-                });
-            });
-
-            window.addEventListener('resize', () => {
-                if (window.innerWidth > 768) {
-                    menu.classList.remove('open');
-                    btn.setAttribute('aria-expanded', 'false');
-                }
-            });
-        })();
-
-        /* =========================
-           HOME: Próximo evento (auto)
-           ========================= */
-
-        // Lista completa de eventos — siempre se muestra solo el más próximo.
-        // Cuando pasa la fecha, automáticamente aparece el siguiente.
-        const LMCS_EVENTS = [
-            {
-                title: "Madrid Leather Social",
-                date: "2026-02-07T18:00:00",
-                location: "Ingrato Madrid",
-                url: "eventos.html#mls-febrero",
-                cartel: "images/galeria/2026/febrero2026.png"
-            },
-            {
-                title: "Madrid Leather Social - 2nd Hand Market",
-                date: "2026-03-07T18:00:00",
-                location: "Inklub",
-                url: "eventos.html#mls-marzo",
-                cartel: "images/galeria/2026/marzo2026.png"
-            },
-            {
-                title: "Iberian Leather Meet-up",
-                date: "2026-03-20T00:00:00",
-                location: "Badajoz",
-                url: "eventos.html#iberian-meetup",
-                cartel: "images/galeria/2026/iberian2026.png"
-            },
-            {
-                title: "Madrid Leather Social - BLUF Social",
-                date: "2026-04-04T18:00:00",
-                location: "Inklub",
-                url: "eventos.html#bluf-abril"
-            },
-            {
-                title: "7º Aniversario LMCS",
-                date: "2026-05-01T00:00:00",
-                location: "Madrid",
-                url: "eventos.html#aniversario"
-            },
-            {
-                title: "Madrid Leather Social",
-                date: "2026-06-06T18:00:00",
-                location: "Inklub",
-                url: "eventos.html#mls-junio"
-            },
-            {
-                title: "Madrid Pride",
-                date: "2026-07-03T00:00:00",
-                location: "Madrid",
-                url: "eventos.html#pride"
-            },
-            {
-                title: "Madrid Leather Social",
-                date: "2026-09-05T18:00:00",
-                location: "Inklub",
-                url: "eventos.html#mls-septiembre"
-            },
-            {
-                title: "Madrid Leather Social",
-                date: "2026-10-03T18:00:00",
-                location: "Inklub",
-                url: "eventos.html#mls-octubre"
-            },
-            {
-                title: "Madrid Leather Weekend - Mr. Leather Spain 2027",
-                date: "2026-10-30T00:00:00",
-                location: "Madrid",
-                url: "eventos.html#mlw"
-            },
-            {
-                title: "Madrid Leather Social - BLUF Social",
-                date: "2026-11-07T18:00:00",
-                location: "Inklub",
-                url: "eventos.html#bluf-noviembre"
-            }
-        ];
-
-        function pad2(n) { return String(n).padStart(2, "0"); }
-
-        function formatDateES(d) {
-            const dd = pad2(d.getDate());
-            const mm = pad2(d.getMonth() + 1);
-            const yyyy = d.getFullYear();
-            const hh = pad2(d.getHours());
-            const min = pad2(d.getMinutes());
-            return `${dd}/${mm}/${yyyy} · ${hh}:${min}`;
-        }
-
-        function formatCountdown(ms) {
-            if (ms <= 0) return "Está ocurriendo ahora 🔥";
-            const totalSeconds = Math.floor(ms / 1000);
-            const days = Math.floor(totalSeconds / (24 * 3600));
-            const hours = Math.floor((totalSeconds % (24 * 3600)) / 3600);
-            const minutes = Math.floor((totalSeconds % 3600) / 60);
-
-            if (days > 0) return `Faltan ${days}d ${hours}h ${minutes}m`;
-            if (hours > 0) return `Faltan ${hours}h ${minutes}m`;
-            return `Faltan ${minutes}m`;
-        }
-
-        function getNextEvent(now) {
-            const upcoming = LMCS_EVENTS
-                .map(e => ({ ...e, dateObj: new Date(e.date) }))
-                .filter(e => !isNaN(e.dateObj.getTime()))
-                .filter(e => e.dateObj.getTime() >= now.getTime())
-                .sort((a, b) => a.dateObj - b.dateObj);
-
-            return upcoming[0] || null;
-        }
-
-        function renderNextEvent() {
-            const now = new Date();
-            const next = getNextEvent(now);
-
-            const badge = document.getElementById("next-event-badge");
-            const title = document.getElementById("next-event-title");
-            const meta = document.getElementById("next-event-meta");
-            const countdown = document.getElementById("next-event-countdown");
-            const cartel = document.getElementById("next-event-cartel");
-
-            if (!badge || !title || !meta || !countdown) return;
-
-            if (!next) {
-                badge.textContent = "Sin eventos próximos";
-                title.textContent = "Ahora mismo no hay un evento programado";
-                meta.textContent = "Vuelve pronto o mira el calendario completo 🙂";
-                countdown.textContent = "";
-                if (cartel) cartel.style.display = "none";
-                return;
-            }
-
-            if (cartel) {
-                if (next.cartel) {
-                    cartel.src = next.cartel;
-                    cartel.alt = next.title;
-                    cartel.style.display = "block";
-                } else {
-                    cartel.style.display = "none";
-                }
-            }
-
-            badge.textContent = "Próximo";
-            title.textContent = next.title;
-            meta.textContent = `${formatDateES(next.dateObj)} · ${next.location || "Ubicación por confirmar"}`;
-            countdown.textContent = formatCountdown(next.dateObj.getTime() - now.getTime());
-        }
-
-        renderNextEvent();
-        setInterval(renderNextEvent, 30 * 1000);
-
-        /* =========================
-           HOME: Carrusel (4 fotos)
-           ========================= */
-
-        // 👉 Sustituye estas rutas por las 4 fotos del ÚLTIMO evento
-        // Ejemplo: "images/galeria-2025/ultimo-evento/01.jpg"
-        const LAST_EVENT_PHOTOS = [
-            "images/galeria/2025/MLW/galaDinner2025/foto9.jpg",
-            "images/galeria/2025/MLW/galaDinner2025/foto17.jpg",
-            "images/galeria/2025/MLW/galaDinner2025/foto19.jpg",
-            "images/galeria/2025/MLW/galaDinner2025/foto29.jpg"
-        ];
-
-        let carouselIndex = 0;
-        const carouselImg = document.getElementById("carouselImage");
-        const carouselCaption = document.getElementById("carouselCaption");
-        const btnPrev = document.getElementById("carouselPrev");
-        const btnNext = document.getElementById("carouselNext");
-
-        function renderCarousel() {
-            if (!carouselImg || !carouselCaption) return;
-
-            const src = LAST_EVENT_PHOTOS[carouselIndex] || "";
-            carouselImg.src = src;
-            carouselImg.alt = `Foto del último evento (${carouselIndex + 1} de ${LAST_EVENT_PHOTOS.length})`;
-            carouselCaption.textContent = `Último evento · ${carouselIndex + 1}/${LAST_EVENT_PHOTOS.length}`;
-        }
-
-        function nextSlide() {
-            carouselIndex = (carouselIndex + 1) % LAST_EVENT_PHOTOS.length;
-            renderCarousel();
-        }
-
-        function prevSlide() {
-            carouselIndex = (carouselIndex - 1 + LAST_EVENT_PHOTOS.length) % LAST_EVENT_PHOTOS.length;
-            renderCarousel();
-        }
-
-        if (btnPrev) btnPrev.addEventListener("click", prevSlide);
-        if (btnNext) btnNext.addEventListener("click", nextSlide);
-
-        renderCarousel();
-        setInterval(nextSlide, 30 * 1000);
-</script>
 
 </body>
 </html>

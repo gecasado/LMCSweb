@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Leathermen Club of Spain">
+
+    <title>Leathermen Club of Spain | Donations</title>
+    <meta name="description" content="Support the Leathermen Club of Spain with a donation. Bank transfer, PayPal or Stripe.">
+    <link rel="canonical" href="https://lmcspain.com/donaciones">
+    <link rel="icon" type="image/png" href="../images/nosotros/iconlmcs.webp">
+
+    <meta property="og:title" content="Donations - LMCS">
+    <meta property="og:description" content="Support the Leathermen Club of Spain with a donation.">
+    <meta property="og:url" content="https://lmcspain.com/donaciones">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lmcspain.com/images/nosotros/logolmcs_black.webp">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Leathermen Club of Spain">
+    <meta name="twitter:description" content="Support the Leathermen Club of Spain with a donation.">
+    <meta name="twitter:image" content="https://lmcspain.com/images/nosotros/logolmcs_black.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="../js/main.js" defer></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=BAArTJ8qK8Gt2YuT3aVRZiezfTdMlJYWlEK1per-J-gU_rAdO75PhqM_fUjQkIVSnKoBrc1BgTHN3MFYq0&components=hosted-buttons&disable-funding=venmo&currency=EUR" defer></script>
+
+    <style>
+        .donaciones-section {
+            max-width: 680px;
+            margin: 60px auto 80px;
+            padding: 0 20px;
+        }
+
+        .donaciones-intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .donaciones-intro h1 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 800;
+            color: var(--lmcs-blue);
+            margin-bottom: 14px;
+        }
+
+        .donaciones-intro p {
+            font-size: 1.05rem;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* Method buttons */
+        .metodos-lista {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .metodo-btn {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            width: 100%;
+            padding: 18px 24px;
+            background: #fff;
+            border: 2px solid var(--lmcs-blue);
+            border-radius: 12px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--lmcs-blue);
+            text-align: left;
+            transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+        }
+
+        .metodo-btn i {
+            font-size: 1.3rem;
+            width: 24px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .metodo-btn .metodo-arrow {
+            margin-left: auto;
+            font-size: 0.9rem;
+            transition: transform 0.2s ease;
+        }
+
+        .metodo-btn:hover {
+            background: var(--lmcs-blue-10, rgba(22,76,121,0.08));
+            transform: translateY(-1px);
+        }
+
+        .metodo-btn.activo {
+            background: var(--lmcs-blue);
+            color: #fff;
+            border-color: var(--lmcs-blue);
+        }
+
+        .metodo-btn.activo .metodo-arrow {
+            transform: rotate(90deg);
+        }
+
+        /* Content card */
+        .metodo-card {
+            display: none;
+            background: #fff;
+            border: 2px solid var(--lmcs-blue);
+            border-radius: 16px;
+            padding: 28px 26px;
+            margin-top: -4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+            animation: fadeIn 0.22s ease;
+        }
+
+        .metodo-card.visible {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-6px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .metodo-card h2 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--lmcs-blue);
+            margin-bottom: 16px;
+        }
+
+        .metodo-card p {
+            font-size: 0.97rem;
+            color: #444;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .metodo-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .dato-fila {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+
+        .dato-label {
+            font-weight: 700;
+            color: var(--lmcs-blue);
+            font-size: 0.92rem;
+            min-width: 130px;
+        }
+
+        .dato-valor {
+            font-size: 0.97rem;
+            color: #333;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 0.01em;
+        }
+
+        .copy-btn {
+            background: none;
+            border: 1px solid var(--lmcs-blue);
+            color: var(--lmcs-blue);
+            border-radius: 6px;
+            padding: 2px 9px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s;
+            font-family: inherit;
+        }
+
+        .copy-btn:hover {
+            background: var(--lmcs-blue);
+            color: #fff;
+        }
+
+        .card-divider {
+            border: none;
+            border-top: 1px solid rgba(22,76,121,0.15);
+            margin: 16px 0;
+        }
+
+        .btn-donacion-externo {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+            padding: 12px 26px;
+            background: var(--lmcs-blue);
+            color: #fff;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.97rem;
+            text-decoration: none;
+            transition: opacity 0.2s ease, transform 0.15s ease;
+        }
+
+        .btn-donacion-externo:hover {
+            opacity: 0.88;
+            transform: translateY(-1px);
+        }
+
+        .btn-justificante {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 22px;
+            background: transparent;
+            color: var(--lmcs-blue);
+            border: 2px solid var(--lmcs-blue);
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            text-decoration: none;
+            transition: background 0.18s ease, color 0.18s ease, transform 0.15s ease;
+            cursor: pointer;
+        }
+
+        .btn-justificante:hover {
+            background: var(--lmcs-blue);
+            color: #fff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 480px) {
+            .dato-label {
+                min-width: 100%;
+            }
+        }
+
+        /* ── FAQ ── */
+        .faq-section {
+            max-width: 680px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+
+        .faq-section h2 {
+            font-size: clamp(20px, 2.2vw, 28px);
+            font-weight: 800;
+            color: var(--lmcs-blue);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .faq-lista {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .faq-item {
+            border: 1.5px solid rgba(22,76,121,0.22);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: border-color 0.2s;
+        }
+
+        .faq-item.abierto {
+            border-color: var(--lmcs-blue);
+        }
+
+        .faq-pregunta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            width: 100%;
+            padding: 18px 22px;
+            background: #fff;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.97rem;
+            font-weight: 700;
+            color: #222;
+            text-align: left;
+            transition: background 0.15s;
+        }
+
+        .faq-pregunta:hover {
+            background: rgba(22,76,121,0.04);
+        }
+
+        .faq-item.abierto .faq-pregunta {
+            color: var(--lmcs-blue);
+            background: rgba(22,76,121,0.05);
+        }
+
+        .faq-icono {
+            flex-shrink: 0;
+            font-size: 0.85rem;
+            color: var(--lmcs-blue);
+            transition: transform 0.22s ease;
+        }
+
+        .faq-item.abierto .faq-icono {
+            transform: rotate(45deg);
+        }
+
+        .faq-respuesta {
+            display: none;
+            padding: 0 22px 18px;
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.75;
+            border-top: 1px solid rgba(22,76,121,0.12);
+        }
+
+        .faq-respuesta.visible {
+            display: block;
+            animation: fadeIn 0.2s ease;
+        }
+
+        .faq-respuesta p {
+            margin: 12px 0 0;
+        }
+
+        .faq-respuesta p:first-child {
+            margin-top: 14px;
+        }
+
+        .faq-respuesta a {
+            color: var(--lmcs-blue);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .faq-aviso {
+            margin-top: 28px;
+            background: rgba(22,76,121,0.07);
+            border-left: 4px solid var(--lmcs-blue);
+            border-radius: 0 10px 10px 0;
+            padding: 16px 20px;
+            font-size: 0.92rem;
+            color: #333;
+            line-height: 1.65;
+        }
+
+        .faq-aviso strong {
+            color: var(--lmcs-blue);
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <a href="/" class="logo">
+                <img loading="lazy" src="../images/nosotros/logolmcs_black.webp" alt="Leathermen Club of Spain Logo">
+                <span>LEATHERMEN CLUB OF SPAIN</span>
+            </a>
+            <nav>
+                <button class="nav-toggle" aria-label="Open/close menu" aria-expanded="false" aria-controls="main-menu" type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="main-menu" class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="nosotros">About</a></li>
+                    <li><a href="eventos">Events</a></li>
+                    <li><a href="galeria">Gallery</a></li>
+                    <li><a href="hazte-socio">Join Us</a></li>
+                    <li><a href="donaciones">Donations</a></li>
+                    <li><a href="contacto">Contact</a></li>
+                </ul>
+            <div class="lang-switcher">
+                    <a href="/donaciones.html">ES</a>
+                    <span class="lang-divider">|</span>
+                    <a href="#" class="lang-active">EN</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <section class="donaciones-section">
+            <div class="donaciones-intro">
+                <h1>Donation</h1>
+                <p>We appreciate your support, please choose your preferred method.</p>
+            </div>
+
+            <div class="metodos-lista">
+
+                <!-- BANK TRANSFER -->
+                <button class="metodo-btn" data-metodo="transferencia" aria-expanded="false">
+                    <i class="fas fa-university"></i>
+                    Bank transfer
+                    <i class="fas fa-chevron-right metodo-arrow"></i>
+                </button>
+                <div class="metodo-card" id="card-transferencia" role="region" aria-label="Bank transfer details">
+                    <h2><i class="fas fa-university" style="margin-right:8px;"></i>Bank transfer</h2>
+                    <div class="dato-fila">
+                        <span class="dato-label">Account holder:</span>
+                        <span class="dato-valor">Asoc. Leathermen Club of Spain</span>
+                    </div>
+                    <div class="dato-fila">
+                        <span class="dato-label">Bank:</span>
+                        <span class="dato-valor">Triodos Bank</span>
+                    </div>
+                    <div class="dato-fila">
+                        <span class="dato-label">IBAN:</span>
+                        <span class="dato-valor" id="iban-val">ES41 1491 0001 2830 0011 3382</span>
+                        <button class="copy-btn" onclick="copiar('iban-val', this)">Copy</button>
+                    </div>
+                    <div class="dato-fila">
+                        <span class="dato-label">Reference:</span>
+                        <span class="dato-valor" id="concepto-val">Donacion</span>
+                        <button class="copy-btn" onclick="copiar('concepto-val', this)">Copy</button>
+                    </div>
+                    <hr class="card-divider">
+                    <p>Please use exactly the reference indicated so we can identify your donation. Thank you very much!</p>
+                    <hr class="card-divider">
+                    <p style="font-size:0.9rem;color:#555;margin-bottom:10px;">Fill in your tax details so we can send you the donation receipt:</p>
+                    <a class="btn-justificante" href="#" onclick="abrirJustificante('Bank transfer'); return false;">
+                        <i class="fas fa-envelope"></i> Request donation receipt
+                    </a>
+                </div>
+
+                <!-- PAYPAL -->
+                <button class="metodo-btn" data-metodo="paypal" aria-expanded="false">
+                    <i class="fab fa-paypal"></i>
+                    PayPal
+                    <i class="fas fa-chevron-right metodo-arrow"></i>
+                </button>
+                <div class="metodo-card" id="card-paypal" role="region" aria-label="Donation via PayPal">
+                    <h2><i class="fab fa-paypal" style="margin-right:8px;"></i>Donation via PayPal</h2>
+                    <p>You can send us a donation directly through PayPal quickly and securely.</p>
+                    <hr class="card-divider">
+                    <div style="display:flex; justify-content:center; align-items:center; margin: 8px 0; min-height: 50px;">
+                        <div id="paypal-container-7B9BZWPSEX4JS" style="width:100%; max-width:300px;"></div>
+                    </div>
+                    <p style="margin-top:10px; font-size:0.88rem; color:#777; text-align:center;"><i class="fas fa-lock" style="margin-right:4px;"></i>Secure payment processed by PayPal.</p>
+                    <hr class="card-divider">
+                    <p style="font-size:0.9rem;color:#555;margin-bottom:10px;">Fill in your tax details so we can send you the donation receipt:</p>
+                    <a class="btn-justificante" href="#" onclick="abrirJustificante('PayPal'); return false;">
+                        <i class="fas fa-envelope"></i> Request donation receipt
+                    </a>
+                </div>
+
+                <!-- STRIPE -->
+                <button class="metodo-btn" data-metodo="stripe" aria-expanded="false">
+                    <i class="fas fa-credit-card"></i>
+                    Stripe (card)
+                    <i class="fas fa-chevron-right metodo-arrow"></i>
+                </button>
+                <div class="metodo-card" id="card-stripe" role="region" aria-label="Donation by card via Stripe">
+                    <h2><i class="fas fa-credit-card" style="margin-right:8px;"></i>Donation by card</h2>
+                    <p>Pay securely with your credit or debit card through Stripe.</p>
+                    <hr class="card-divider">
+                    <div style="margin: 4px 0 8px; display:flex; justify-content:center;">
+                        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+                        <stripe-buy-button
+                            buy-button-id="buy_btn_1T4Hub05ve5FrZ6EGzSzObiT"
+                            publishable-key="pk_live_51Q5RGA05ve5FrZ6ENScXYJMgsuUVqi1Xh6WuR9iJAZS3k0gKDK387CTe89ODXCHPXPAz1M1Mj6SyJ9RsmMFaoubl00j7F6v7jT"
+                        >
+                        </stripe-buy-button>
+                    </div>
+                    <p style="margin-top:10px; font-size:0.88rem; color:#777;"><i class="fas fa-lock" style="margin-right:4px;"></i>SSL-encrypted secure payment. We do not store your card details.</p>
+                    <hr class="card-divider">
+                    <p style="font-size:0.9rem;color:#555;margin-bottom:10px;">Fill in your tax details so we can send you the donation receipt:</p>
+                    <a class="btn-justificante" href="#" onclick="abrirJustificante('Stripe'); return false;">
+                        <i class="fas fa-envelope"></i> Request donation receipt
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <h2>Frequently asked questions</h2>
+
+            <div class="faq-lista">
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" aria-expanded="false">
+                        What are donations used for?
+                        <i class="fas fa-plus faq-icono"></i>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>All donations received go entirely towards covering the club's expenses: event organisation, communications, materials, venue fees and any community initiative launched by LMCS.</p>
+                        <p>Your support allows us to keep being a free, inclusive and active space for the leather and fetish community in Spain.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" aria-expanded="false">
+                        Can I deduct my donation from my tax return?
+                        <i class="fas fa-plus faq-icono"></i>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>The Leathermen Club of Spain is a legally registered <strong>non-profit association</strong>. Donations to non-profit associations are not subject to the tax deductions under Law 49/2002, which applies exclusively to foundations and associations declared of public utility.</p>
+                        <p>This means that, at present, donations to LMCS are not tax-deductible. If you have questions about your specific tax situation, we recommend consulting the Spanish Tax Agency or a tax advisor.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" aria-expanded="false">
+                        Can I request a receipt for my donation?
+                        <i class="fas fa-plus faq-icono"></i>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>Yes. In each payment method you will find the <strong>"Request receipt"</strong> button. Clicking it will open your email client with the subject and body already filled in; you just need to complete your details and send it.</p>
+                        <p>We will need: full name, ID number, postal address, email address, amount donated and date of the donation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" aria-expanded="false">
+                        Is it safe to donate by card?
+                        <i class="fas fa-plus faq-icono"></i>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>Yes. Card payments are processed through <strong>Stripe</strong>, one of the most secure payment platforms in the world. The entire transaction is SSL-encrypted and LMCS does not store or have access to your card details at any time.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" aria-expanded="false">
+                        Can I cancel or modify a recurring donation?
+                        <i class="fas fa-plus faq-icono"></i>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>Of course. If you have set up a recurring donation through PayPal or Stripe, you can cancel or modify it at any time from your account on the relevant platform, without needing to contact us.</p>
+                        <p>If you have any questions, write to us at <a href="mailto:lmcs@lmcspain.com">lmcs@lmcspain.com</a> and we will help you.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" aria-expanded="false">
+                        Is there a minimum donation amount?
+                        <i class="fas fa-plus faq-icono"></i>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>There is no minimum amount. Any contribution, no matter how small, is welcome and helps us keep going. Thank you so much for your support!</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="faq-aviso">
+                <strong>Do you have more questions?</strong> Write to us at <a href="mailto:lmcs@lmcspain.com" style="color:var(--lmcs-blue);font-weight:600;">lmcs@lmcspain.com</a> and we will get back to you as soon as possible.
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="mailto:lmcs@lmcspain.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.instagram.com/leathermen_club_of_spain_lmcs" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/leathermenclubofspain/" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://wa.me/34636688063" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-legal" style="margin-top: 20px; font-size: 0.8rem; opacity: 0.7;">
+            <a href="aviso-legal" style="color: white; margin: 0 10px;">Legal Notice</a> |
+            <a href="privacidad" style="color: white; margin: 0 10px;">Privacy Policy</a> |
+            <a href="estatutos" style="color: white; margin: 0 10px;">Bylaws</a>
+        </div>
+
+        <div class="copyright-line">
+            <p>&copy; <span class="current-year"></span> Leathermen Club of Spain. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Donation method accordion
+        var paypalIniciado = false;
+
+        document.querySelectorAll('.metodo-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var metodo = btn.dataset.metodo;
+                var card = document.getElementById('card-' + metodo);
+                var yaActivo = btn.classList.contains('activo');
+
+                // Close all
+                document.querySelectorAll('.metodo-btn').forEach(function(b) {
+                    b.classList.remove('activo');
+                    b.setAttribute('aria-expanded', 'false');
+                });
+                document.querySelectorAll('.metodo-card').forEach(function(c) {
+                    c.classList.remove('visible');
+                });
+
+                // Open the selected one if it was not active
+                if (!yaActivo) {
+                    btn.classList.add('activo');
+                    btn.setAttribute('aria-expanded', 'true');
+                    card.classList.add('visible');
+
+                    // Initialise PayPal only when its card is opened and only once
+                    if (metodo === 'paypal' && !paypalIniciado) {
+                        var intervalo = setInterval(function() {
+                            if (typeof paypal !== 'undefined') {
+                                clearInterval(intervalo);
+                                paypalIniciado = true;
+                                paypal.HostedButtons({
+                                    hostedButtonId: "7B9BZWPSEX4JS",
+                                }).render("#paypal-container-7B9BZWPSEX4JS");
+                            }
+                        }, 100);
+                    }
+                }
+            });
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-pregunta').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var item = btn.closest('.faq-item');
+                var respuesta = item.querySelector('.faq-respuesta');
+                var abierto = item.classList.contains('abierto');
+
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(function(i) {
+                    i.classList.remove('abierto');
+                    i.querySelector('.faq-pregunta').setAttribute('aria-expanded', 'false');
+                    i.querySelector('.faq-respuesta').classList.remove('visible');
+                });
+
+                // Open the clicked one if it was closed
+                if (!abierto) {
+                    item.classList.add('abierto');
+                    btn.setAttribute('aria-expanded', 'true');
+                    respuesta.classList.add('visible');
+                }
+            });
+        });
+
+        // Open email client with prefilled body for donation receipt
+        function abrirJustificante(metodo) {
+            var asunto = encodeURIComponent('Donation receipt request – Donation via ' + metodo);
+            var cuerpo = encodeURIComponent(
+                'Hello,\n\n' +
+                'I am writing to request a receipt for my donation made via ' + metodo + '.\n\n' +
+                'My details are:\n\n' +
+                'Full name: \n' +
+                'ID number: \n' +
+                'Postal address: \n' +
+                'Email address: \n' +
+                'Amount donated: \n' +
+                'Date of donation: \n\n' +
+                'Many thanks.'
+            );
+            window.location.href = 'mailto:lmcs@lmcspain.com?subject=' + asunto + '&body=' + cuerpo;
+        }
+
+        // Copy to clipboard
+        function copiar(idElemento, boton) {
+            var texto = document.getElementById(idElemento).textContent.trim();
+            navigator.clipboard.writeText(texto).then(function() {
+                var original = boton.textContent;
+                boton.textContent = 'Copied!';
+                setTimeout(function() { boton.textContent = original; }, 1800);
+            });
+        }
+    </script>
+</body>
+</html>

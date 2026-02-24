@@ -5,34 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Leathermen Club of Spain">
-    <title>Hazte Socio - Leathermen Club of Spain</title>
-    <meta name="description" content="Únete al Leathermen Club of Spain. Completa el formulario para hacerte socio.">
-    <meta name="keywords" content="Leathermen, Club, España, Comunidad, Cultura Leatherman, cuero, fetichismo, eventos, reuniones, LMCS, socio">
-    <link rel="icon" type="image/png" href="images/iconLMCS.png">
-    <meta property="og:title" content="Hazte Socio - Leathermen Club of Spain">
-    <meta property="og:description" content="Únete al Leathermen Club of Spain.">
-    <meta property="og:image" content="https://XXXX/images/og-image.png">
-    <meta property="og:url" content="https://XXXX/hazte-socio.html">
+
+    <title>Leathermen Club of Spain | Comunidad Leather en España</title>
+    <meta name="description" content="Únete al club oficial de Leathermen en España. Eventos, comunidad, cultura leather y fetichismo.">
+    <link rel="canonical" href="https://lmcspain.com/hazte-socio">
+    <link rel="icon" type="image/png" href="images/nosotros/iconlmcs.webp">
+
+    <meta property="og:title" content="Hazte Socio - LMCS">
+    <meta property="og:description" content="Únete al club oficial de Leathermen en España. Eventos, comunidad y cultura leather.">
+    <meta property="og:url" content="https://lmcspain.com/hazte-socio">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lmcspain.com/images/nosotros/logolmcs_black.webp">
+    <meta property="og:locale" content="es_ES">
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hazte Socio - Leathermen Club of Spain">
-    <meta name="twitter:description" content="Únete al Leathermen Club of Spain.">
-    <meta name="twitter:image" content="https://XXXX/images/og-image.png">
-    <meta name="theme-color" content="#2C4A7C">
-    <meta name="format-detection" content="telephone=no">
-    <!-- Google Fonts: Inter -->
+    <meta name="twitter:title" content="Leathermen Club of Spain">
+    <meta name="twitter:description" content="Comunidad dedicada a la cultura leatherman en España.">
+    <meta name="twitter:image" content="https://lmcspain.com/images/nosotros/logolmcs_black.webp">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <!-- HEADER -->
     <header>
         <div class="container">
-            <a href="index.html" class="logo">
-                <img loading="lazy" src="images/logoLMCS_black.png" alt="Leathermen Club of Spain Logo">
+            <a href="/" class="logo">
+                <img loading="lazy" src="images/nosotros/logolmcs_black.webp" alt="Leathermen Club of Spain Logo">
                 <span>LEATHERMEN CLUB OF SPAIN</span>
             </a>
             <nav>
@@ -42,13 +47,19 @@
                     <span></span>
                 </button>
                 <ul id="main-menu" class="nav-menu">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="eventos.html">Eventos</a></li>
-                    <li><a href="galeria.html">Galería</a></li>
-                    <li><a href="hazte-socio.html" class="active">Hazte Socio</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="nosotros">Nosotros</a></li>
+                    <li><a href="eventos">Eventos</a></li>
+                    <li><a href="galeria">Galería</a></li>
+                    <li><a href="hazte-socio" class="active">Hazte Socio</a></li>
+                    <li><a href="donaciones">Donaciones</a></li>
+                    <li><a href="contacto">Contacto</a></li>
                 </ul>
+            <div class="lang-switcher">
+                    <a href="#" class="lang-active">ES</a>
+                    <span class="lang-divider">|</span>
+                    <a href="/en/hazte-socio.html">EN</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -65,7 +76,7 @@
         <script src="https://embed.typeform.com/next/embed.js"></script>
 
         <div class="form-instruction">
-            <p>Puedes leer nuestros estatutos pinchando <a href="estatutos.html">aquí</a>.</p>
+            <p>Puedes leer nuestros estatutos pinchando <a href="estatutos">aquí</a>.</p>
         </div>
     </main>
 
@@ -73,7 +84,7 @@
     <footer>
         <div class="footer-content">
             <div class="social-links">
-                <a href="mailto:leathermenclubspain@gmail.com" aria-label="Email">
+                <a href="mailto:lmcs@lmcspain.com" aria-label="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
                 <a href="https://www.instagram.com/leathermen_club_of_spain_lmcs" target="_blank" aria-label="Instagram">
@@ -87,37 +98,17 @@
                 </a>
             </div>
         </div>
-        
+
+        <div class="footer-legal" style="margin-top: 20px; font-size: 0.8rem; opacity: 0.7;">
+            <a href="aviso-legal" style="color: white; margin: 0 10px;">Aviso Legal</a> |
+            <a href="privacidad" style="color: white; margin: 0 10px;">Politica de Privacidad</a> |
+            <a href="estatutos" style="color: white; margin: 0 10px;">Estatutos</a>
+        </div>
+
         <div class="copyright-line">
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> Leathermen Club of Spain. Todos los derechos reservados.</p>
+            <p>&copy; <span class="current-year"></span> Leathermen Club of Spain. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script>
-        (function () {
-            const btn = document.querySelector('.nav-toggle');
-            const menu = document.querySelector('nav ul.nav-menu');
-            if (!btn || !menu) return;
-
-            btn.addEventListener('click', () => {
-                const isOpen = menu.classList.toggle('open');
-                btn.setAttribute('aria-expanded', String(isOpen));
-            });
-
-            menu.querySelectorAll('a').forEach((a) => {
-                a.addEventListener('click', () => {
-                    menu.classList.remove('open');
-                    btn.setAttribute('aria-expanded', 'false');
-                });
-            });
-
-            window.addEventListener('resize', () => {
-                if (window.innerWidth > 768) {
-                    menu.classList.remove('open');
-                    btn.setAttribute('aria-expanded', 'false');
-                }
-            });
-        })();
-    </script>
 </body>
 </html>

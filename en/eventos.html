@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Leathermen Club of Spain">
+
+    <title>Leathermen Club of Spain | Leather Community in Spain</title>
+    <meta name="description" content="Join the official Leathermen Club of Spain. Events, community, leather culture and fetish.">
+    <link rel="canonical" href="https://lmcspain.com/eventos">
+    <link rel="icon" type="image/png" href="../images/nosotros/iconlmcs.webp">
+
+    <meta property="og:title" content="Events - LMCS">
+    <meta property="og:description" content="Join the official Leathermen Club of Spain. Events, community and leather culture.">
+    <meta property="og:url" content="https://lmcspain.com/eventos">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lmcspain.com/images/nosotros/logolmcs_black.webp">
+    <meta property="og:locale" content="en_GB">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Leathermen Club of Spain">
+    <meta name="twitter:description" content="Community dedicated to leatherman culture in Spain.">
+    <meta name="twitter:image" content="https://lmcspain.com/images/nosotros/logolmcs_black.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="../js/main.js" defer></script>
+    <script src="../js/eventos.js" defer></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <a href="/" class="logo">
+                <img loading="lazy" src="../images/nosotros/logolmcs_black.webp" alt="Leathermen Club of Spain Logo">
+                <span>LEATHERMEN CLUB OF SPAIN</span>
+            </a>
+            <nav>
+                <button class="nav-toggle" aria-label="Open/close menu" aria-expanded="false" aria-controls="main-menu" type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="main-menu" class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="nosotros">About</a></li>
+                    <li><a href="eventos" class="active">Events</a></li>
+                    <li><a href="galeria">Gallery</a></li>
+                    <li><a href="hazte-socio">Join Us</a></li>
+                    <li><a href="donaciones">Donations</a></li>
+                    <li><a href="contacto">Contact</a></li>
+                </ul>
+            <div class="lang-switcher">
+                    <a href="/eventos.html">ES</a>
+                    <span class="lang-divider">|</span>
+                    <a href="#" class="lang-active">EN</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <div class="eventos-page">
+            <h1>Events 2026</h1>
+            <p class="eventos-intro">Discover all our events and activities for the year</p>
+
+            <!-- Legend -->
+            <div class="timeline-legend">
+                <div class="legend-item">
+                    <div class="legend-dot past"></div>
+                    <span>Past</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot next"></div>
+                    <span>Next</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot future"></div>
+                    <span>Future</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot special"></div>
+                    <span>Special</span>
+                </div>
+            </div>
+
+            <!-- HORIZONTAL TIMELINE (scroll + arrows) -->
+            <div class="timeline-scroll" aria-label="Events timeline">
+                <button class="timeline-arrow left" type="button" aria-label="View previous events">
+                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                </button>
+
+                <div class="timeline-horizontal" id="timelineScroll">
+                    <div class="timeline-wrapper" id="timeline">
+                        <!-- Events are generated with JS -->
+                    </div>
+                </div>
+
+                <button class="timeline-arrow right" type="button" aria-label="View next events">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- SPECIAL EVENTS -->
+            <section class="eventos-section">
+                <h2 class="eventos-section-title">
+                    <i class="fas fa-star"></i>
+                    Special Events
+                </h2>
+                <div class="eventos-grid" id="eventosEspeciales">
+                    <!-- Generated with JS -->
+                </div>
+            </section>
+
+            <!-- REGULAR EVENTS -->
+            <section class="eventos-section">
+                <h2 class="eventos-section-title regular">
+                    <i class="fas fa-calendar-alt"></i>
+                    Madrid Leather Social
+                </h2>
+                <div class="eventos-grid" id="eventosRegulares">
+                    <!-- Generated with JS -->
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="mailto:lmcs@lmcspain.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.instagram.com/leathermen_club_of_spain_lmcs" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/leathermenclubofspain/" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://wa.me/34636688063" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-legal" style="margin-top: 20px; font-size: 0.8rem; opacity: 0.7;">
+            <a href="aviso-legal" style="color: white; margin: 0 10px;">Legal Notice</a> |
+            <a href="privacidad" style="color: white; margin: 0 10px;">Privacy Policy</a> |
+            <a href="estatutos" style="color: white; margin: 0 10px;">Bylaws</a>
+        </div>
+
+        <div class="copyright-line">
+            <p>&copy; <span class="current-year"></span> Leathermen Club of Spain. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

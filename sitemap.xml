@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ESPAÑOL -->
+  <url>
+    <loc>https://lmcspain.com/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lmcspain.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lmcspain.com/en/index.html"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://lmcspain.com/nosotros</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lmcspain.com/nosotros"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lmcspain.com/en/nosotros.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lmcspain.com/eventos</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lmcspain.com/eventos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lmcspain.com/en/eventos.html"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lmcspain.com/galeria</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lmcspain.com/galeria"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lmcspain.com/en/galeria.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lmcspain.com/galeria-2025</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lmcspain.com/galeria-2025"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lmcspain.com/en/galeria-2025.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lmcspain.com/galeria-2026</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lmcspain.com/galeria-2026"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lmcspain.com/en/galeria-2026.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lmcspain.com/galeria-2026-social-febrero</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lmcspain.com/galeria-2026-social-febrero"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lmcspain.com/en/galeria-2026-social-febrero.html"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lmcspain.com/contacto</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lmcspain.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lmcspain.com/en/contacto.html"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lmcspain.com/hazte-socio</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lmcspain.com/hazte-socio"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lmcspain.com/en/hazte-socio.html"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lmcspain.com/donaciones</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lmcspain.com/donaciones"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lmcspain.com/en/donaciones.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lmcspain.com/estatutos</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lmcspain.com/estatutos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lmcspain.com/en/estatutos.html"/>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lmcspain.com/aviso-legal</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lmcspain.com/aviso-legal"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lmcspain.com/en/aviso-legal.html"/>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://lmcspain.com/privacidad</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lmcspain.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lmcspain.com/en/privacidad.html"/>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- ENGLISH -->
+  <url><loc>https://lmcspain.com/en/index.html</loc><priority>1.0</priority></url>
+  <url><loc>https://lmcspain.com/en/nosotros.html</loc><priority>0.8</priority></url>
+  <url><loc>https://lmcspain.com/en/eventos.html</loc><priority>0.9</priority></url>
+  <url><loc>https://lmcspain.com/en/galeria.html</loc><priority>0.8</priority></url>
+  <url><loc>https://lmcspain.com/en/galeria-2025.html</loc><priority>0.7</priority></url>
+  <url><loc>https://lmcspain.com/en/galeria-2026.html</loc><priority>0.7</priority></url>
+  <url><loc>https://lmcspain.com/en/galeria-2026-social-febrero.html</loc><priority>0.6</priority></url>
+  <url><loc>https://lmcspain.com/en/contacto.html</loc><priority>0.6</priority></url>
+  <url><loc>https://lmcspain.com/en/hazte-socio.html</loc><priority>0.9</priority></url>
+  <url><loc>https://lmcspain.com/en/donaciones.html</loc><priority>0.8</priority></url>
+  <url><loc>https://lmcspain.com/en/estatutos.html</loc><priority>0.5</priority></url>
+  <url><loc>https://lmcspain.com/en/aviso-legal.html</loc><priority>0.3</priority></url>
+  <url><loc>https://lmcspain.com/en/privacidad.html</loc><priority>0.3</priority></url>
+
+</urlset>
